@@ -1,0 +1,611 @@
+<script>
+    if (!localStorage.getItem("idA")) {
+      window.location = "signIn.html";
+    }
+  </script>
+  
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> NavBar </title>
+  
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="../plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css">
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+  
+    <!-- Preloader -->
+    <div class="preloader flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src="../dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    </div>
+  
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="../index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item active d-none d-sm-inline-block">
+          <a href="mailBox.html" class="nav-link ">Inbox</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="navBar.html" class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+  
+  
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <br>
+      <!-- Brand Logo -->
+      <a href="profile.html" class="brand-link">
+        <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">Admin</span>
+      </a>
+      <br>
+      <!--TODO 1-->
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block" id="userName"></a>
+          </div>
+        </div>
+  
+  
+        <!-- SidebarSearch Form -->
+        <br>
+  
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+                 with font-awesome or any other icon font library -->
+  
+            <li class="nav-item menu-open">
+              <a href="../index.html" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+                </p>
+              </a>
+              
+            </li>
+  
+            <br>
+        
+            <li class="nav-item">
+              <a href="#" class="nav-link active">
+                <i class="fas fa-user-graduate"></i>
+                <p>
+                  Students
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addStudent.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="listStudent.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <br>
+  
+            <li class="nav-item">
+              <a href="#" class="nav-link ">
+                <i class="fas fa-school"></i>
+                <p>
+                  Classes
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addClasse.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="listClasse.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <br>
+  
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-calendar-alt"></i>
+                <p>
+                  Schedule
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addSchedule.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="listSchedule.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+  
+  
+            <br>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-calendar-alt"></i>
+                <p>
+                  Events
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addEvent.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="events.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Event</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <br>
+  
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-user-cog"></i>
+                <p>
+                  Users
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addUser.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="listUser.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+  
+            <br>
+            <li class="nav-item">
+              <a href="demande.html" class="nav-link">
+                <i class="fas fa-file"></i>
+                <p>
+                  Paper Request 
+                </p>
+              </a>
+            </li>
+  
+            <br>
+            <li class="nav-item">
+              <a href="" onclick="logout();" class="nav-link">
+                <i class="fas fa-sign-out-alt"></i>
+                <p>
+                  Log Out
+                  
+                </p>
+              </a>
+              
+            </li>
+  
+  
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+  
+      <!--TODO 2-->
+      <!-- Main content -->
+  
+      <div class="content-wrapper">
+
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>Inbox</h1>
+              </div>
+
+              <!--<div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active">Inbox</li>
+                </ol>
+              </div>-->
+            </div>
+          </div><!-- /.container-fluid -->
+        </section>
+    
+        <!-- Main content -->
+        <section class="content">
+          <div class="row">
+
+            <!--TODO LEFT Card-->
+            <div class="col-md-3">
+              <a href="#" onclick="alert('Not Configure yet')" class="btn btn-primary btn-block mb-3">Compose</a>
+    
+
+              
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Folders</h3>
+    
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <ul class="nav nav-pills flex-column">
+                    <li class="nav-item active">
+                      <a href="#" class="nav-link">
+                        <i class="fas fa-inbox"></i> Inbox
+                        <span class="badge bg-primary float-right">12</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        <i class="far fa-envelope"></i> Sent
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        <i class="far fa-file-alt"></i> Drafts
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        <i class="fas fa-filter"></i> Junk
+                        <span class="badge bg-warning float-right">65</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        <i class="far fa-trash-alt"></i> Trash
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- /.card-body -->
+              </div>
+
+              <!-- /.card -->
+              
+            </div>
+            <!-- /.col -->
+
+            <div class="col-md-9">
+              <div class="card card-primary card-outline">
+                <div class="card-header">
+                  <h3 class="card-title">Inbox</h3>
+    
+                  <div class="card-tools">
+                    <div class="input-group input-group-sm">
+                      <input type="text" class="form-control" id="searchMail" placeholder="Search Mail">
+                      <div class="input-group-append">
+                        <div class="btn btn-primary">
+                          <i class="fas fa-search"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.card-tools -->
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body p-0">
+                  <div class="mailbox-controls">
+                    
+                    <!-- Check all button -->
+                    <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="far fa-square"></i>
+                    </button>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-sm">
+                        <i class="far fa-trash-alt"></i>
+                      </button>
+                      
+                    </div>
+                    <!-- /.btn-group -->
+                    <button type="button" onclick="" class="btn btn-default btn-sm">
+                      <i class="fas fa-sync-alt"></i>
+                    </button>
+
+
+                    <div class="float-right" >
+                      <span class="text" id="mailLength"></span>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-sm">
+                          <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-default btn-sm">
+                          <i class="fas fa-chevron-right"></i>
+                        </button>
+                      </div>
+                      <!-- /.btn-group -->
+                    </div>
+                    <!-- /.float-right -->
+                  </div>
+
+                  <div class="table-responsive mailbox-messages" >
+                    <table class="table table-hover table-striped">
+                      <tbody id="mailContainer" >
+                        
+                      
+                      </tbody>
+                    </table>
+                    <!-- /.table -->
+                  </div>
+                  <!-- /.mail-box-messages -->
+                </div>
+                <!-- /.card-body -->
+                
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </section>
+        <!-- /.content -->
+      </div>
+      
+      <footer class="main-footer">
+        <strong>Copyright &copy; 2023 <a href="#"></a>Stage</strong>
+        All rights reserved.
+        <div class="float-right d-none d-sm-inline-block">
+          <b>Version</b> 1.0
+        </div>
+      </footer>
+  
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+  
+  <!-- jQuery -->
+  <script src="../plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="../plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="../plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="../plugins/moment/moment.min.js"></script>
+  <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="../plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../dist/js/adminlte.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../dist/js/demo.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="../dist/js/pages/dashboard.js"></script>
+  
+  <script>
+    document.getElementById("userName").innerHTML= localStorage.getItem("usernameA");
+  </script>
+
+<script>
+  // Définir une requête de connection standard JS
+  var request = new XMLHttpRequest();
+  // Choisir la méthode GET comme une méthode d'accès au serveur et récupérer les données .
+  request.open("GET", "http://127.0.0.1:3000/messages", true);
+  // Load les données à partir de la serveur -> Début connection
+  request.onload = function () {
+    // Begin accessing JSON data here
+    var data = JSON.parse(this.response);
+    var table = document.getElementById("mailContainer");
+    console.log("data: "+data);
+    
+    data.forEach((i) => {
+
+      var link = document.createElement("a");
+      link.href = "consultPage.html?id=" + i.id; 
+      // Insérer une ligne dans le tableau
+      var row = table.insertRow(-1);
+      
+      // Insérer des cellules dans le tableau
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
+      var cell5 = row.insertCell(4);
+      var cell6 = row.insertCell(5);
+
+
+      cell1.innerHTML = '<div class="icheck-primary"><input type="checkbox" value="" id="check1"><label for="check1"></label></div>';
+      
+      //cell2.addClass("mailbox-star");
+      cell2.innerHTML = '<a href="mailConsult.html?id='+i._id+'"><i class="fas fa-eye"></i></a>';
+
+      $.getJSON(
+        "http://127.0.0.1:3000/users/" + i.idSender,
+        function (user) {
+          cell3.innerHTML = '<a href="userConsult.html?id='+user._id+'">'+user.nom+' '+user.prenom+'</a>';
+        }
+      );
+      //cell3.addClass("mailbox-name");
+      
+
+      //cell4.addClass("mailbox-subject")
+      cell4.innerHTML = '<b>'+i.subject+'</b> - '+i.messageText;
+
+      //cell5.addClass("mailbox-attachment");
+      cell5.innerHTML= '<i class="fas fa-paperclip"></i>';
+
+      //cell6.addClass("mailbox-date");
+      cell6.innerHTML=i.createdAt.substring(0,10);
+
+      // Récupérer les données du client correspondant à l'idClient de la table rendezvous
+      
+
+    });
+  };
+  // Send request
+  request.send();
+</script>
+
+  <!-- Page specific script -->
+<script>
+  $(function () {
+    //Enable check and uncheck all functionality
+    $('.checkbox-toggle').click(function () {
+      var clicks = $(this).data('clicks')
+      if (clicks) {
+        //Uncheck all checkboxes
+        $('.mailbox-messages input[type=\'checkbox\']').prop('checked', false)
+        $('.checkbox-toggle .far.fa-check-square').removeClass('fa-check-square').addClass('fa-square')
+      } else {
+        //Check all checkboxes
+        $('.mailbox-messages input[type=\'checkbox\']').prop('checked', true)
+        $('.checkbox-toggle .far.fa-square').removeClass('fa-square').addClass('fa-check-square')
+      }
+      $(this).data('clicks', !clicks)
+    })
+
+    //Handle starring for font awesome
+    $('.mailbox-star').click(function (e) {
+      e.preventDefault()
+      //detect type
+      var $this = $(this).find('a > i')
+      var fa    = $this.hasClass('fa')
+
+      //Switch states
+      if (fa) {
+        $this.toggleClass('fa-star')
+        $this.toggleClass('fa-star-o')
+      }
+    })
+  })
+</script>
+
+<!--Mail Length-->
+<script>
+  // Définir une requête de connection standard JS
+  var request = new XMLHttpRequest();
+  // Choisir la méthode GET comme une méthode d'accès au serveur et récupérer les données .
+  request.open("GET", "http://127.0.0.1:3000/messages", true);
+  // Load les données à partir de la serveur -> Début connection
+  request.onload = function () {
+    // Begin accessing JSON data here
+    var data = JSON.parse(this.response);
+    document.getElementById("mailLength").innerHTML = "1-30 / "+data.length;
+  };
+  // Send request
+  request.send();
+</script>
+  
+  <!--LOgout-->
+  <script>
+    function logout() {
+      var d = window.confirm("want to LogOut");
+      if (d == true) {
+        // localStorage.removeItem("idA");
+        localStorage.clear();
+        location.href = "signIn.html";
+      }
+    }
+  </script>
+
+  <!--Refresh-->
+  <script>
+    function refreshDivContent() {
+  // Replace this with your logic to fetch or update the content
+  const newContent = document.getElementById("mailContainer");
+
+  // Select the <div> by its id
+  const divContainer = document.getElementById("mailContainer");
+
+  // Update the content of the <div>
+  divContainer.innerHTML = newContent;
+}
+  </script>
+  </body>
+  </html>
+  
