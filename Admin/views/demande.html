@@ -184,14 +184,15 @@
     <section class="content">
         <div class="container-fluid">
             
-            <form action="enhanced-results.html">
+            <form onchange="filter();">
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-group">
                                     <label>Result Type:</label>
-                                    <select class="select2" multiple="multiple" data-placeholder="All" style="width: 100%;">
+                                    <select  id="type"  style="width: 100%;">
+                                      <option selected>All</option>
                                         <option>Attestation de Presence</option>
                                         <option>Attestation d'inscription</option>
                                         <option>Attestation de réussite</option>
@@ -199,6 +200,18 @@
                                     </select>
                                 </div>
                             </div>
+
+                            <div class="col-6">
+                              <div class="form-group">
+                                  <label>Etat:</label>
+                                  <select  id="etat"  style="width: 100%;">
+                                    <option selected>All</option>
+                                      <option>Ready</option>
+                                      <option>Not Ready</option>
+                                      
+                                  </select>
+                              </div>
+                          </div>
                         </div>
                         
                     </div>
@@ -303,12 +316,7 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="../dist/js/pages/dashboard.js"></script>
 
-<script src="../plugins/select2/js/select2.full.min.js"></script>
-<script>
-    $(function () {
-      $('.select2').select2()
-    });
-</script>
+
 
 <script>
   // Définir une requête de connection standard JS
@@ -346,6 +354,124 @@
   // Send request
   request.send();
 </script>
+
+<!--Search-->
+<script>
+ 
+  function filter(){
+   var typeFilter = document.getElementById("type");
+   var etatFilter = document.getElementById("etat");
+
+ var tbody = document.getElementById("listDemande");
+ //var tbody = table.querySelector("tbody");
+ var rows = tbody.getElementsByTagName("tr");
+ 
+ var type = typeFilter.value.toLowerCase().replace(/\s/g, '');
+ var etat = etatFilter.value.toLowerCase().replace(/\s/g, '');
+
+ 
+ 
+ for (var i = 0; i < rows.length; i++) { // Start from 1 to skip the header row
+    var row = rows[i];
+    var typeCell = row.cells[1].textContent.toLowerCase().replace(/\s/g, ''); // Assuming the type is in the second cell
+    var etatCell = row.cells[3].textContent.toLowerCase().replace(/\s/g, ''); // Assuming the etat is in the fourth cell
+
+    //console.log(typeCell);
+    // Check if the row matches the selected filters
+    var typeMatch = (type == "all" || typeCell == type);
+    var etatMatch = (etat == "all" || etatCell == etat);
+
+    // Show or hide the row based on the filter
+    if (typeMatch && etatMatch) {
+      row.style.display = "";
+    } else {
+      row.style.display = "none";
+    }
+  }
+  }
+ 
+ </script>
+
+
+
+<!--Search old scrpit
+<script>
+  function filter(){
+    var type = document.getElementById("type").value;
+
+    var table = document.getElementById("listDemande");
+    for (var i = table.rows.length - 1; i >= 0; i--) {
+    table.deleteRow(i);
+}
+    
+     // Create a request variable and assign a new XMLHttpRequest object to it.
+     var request = new XMLHttpRequest();
+// Open a new connection, using the GET request on the URL endpoint
+request.open("GET", "http://127.0.0.1:3000/demandes", true);
+request.onload = function () {
+  // Begin accessing JSON data here
+  var data = JSON.parse(this.response);
+  
+  var j = 1;
+  data.forEach((i) => {
+    if(type == "All"){
+      var row = table.insertRow(-1);
+// Insérer des cellules dans le tableau
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+var cell3 = row.insertCell(2);
+var cell4 = row.insertCell(3);
+var cell5 = row.insertCell(4);
+var cell6 = row.insertCell(5);
+
+cell1.innerHTML = j;
+cell2.innerHTML = i.type;
+cell3.innerHTML = i.createdAt.substring(0,10);
+cell4.innerHTML = i.etatActuelle;
+cell5.innerHTML =       `<a href="demandeConsult.html?id=`+i._id+`">  <i class="fas fa-eye"></i></a>`;
+cell6.innerHTML = '<a href="#"> <i class="fas fa-trash-alt"></a></i>' ;
+
+j = j + 1;
+      
+    }else{
+      if( type == i.type){
+
+
+
+// Insérer une ligne dans le tableau
+var row = table.insertRow(-1);
+// Insérer des cellules dans le tableau
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+var cell3 = row.insertCell(2);
+var cell4 = row.insertCell(3);
+var cell5 = row.insertCell(4);
+var cell6 = row.insertCell(5);
+
+cell1.innerHTML = j;
+cell2.innerHTML = i.type;
+cell3.innerHTML = i.createdAt.substring(0,10);
+cell4.innerHTML = i.etatActuelle;
+cell5.innerHTML =       `<a href="demandeConsult.html?id=`+i._id+`">  <i class="fas fa-eye"></i></a>`;
+cell6.innerHTML = '<a href="#"> <i class="fas fa-trash-alt"></a></i>' ;
+
+j = j + 1;
+
+}
+
+    }
+
+
+});
+
+   
+  
+};
+request.send();
+  }
+</script>-->
+
+
 
 <script>
   document.getElementById("userName").innerHTML= localStorage.getItem("usernameA");

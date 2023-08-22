@@ -221,7 +221,7 @@
                 <div class="form-group">
                   <label>Classe</label>
                   <select class="form-control" name="classe" id="studentClasse">
-                    
+                    <option value="" disabled selected>Select a classe</option>
                   </select>
                 </div>
               </div>
@@ -425,6 +425,9 @@ $(function () {
       data.phone = document.getElementById("studentTel").value;
       
       data.idClasse = document.getElementById("studentClasse").value;
+
+      data.numInscription= genererNumeroInscriptionUnique();
+      data.etatActuelle= "Inscrit";
       data.dateDeNaissance = document.getElementById("studentDateDeNaissance").value;
       data.remarque = document.getElementById("studentRemarque").value;
 
@@ -452,6 +455,27 @@ $(function () {
     }
 
 
+  </script>
+
+  <script>
+    function genererNumeroInscriptionUnique() {
+     
+
+      let numeroInscription = '';
+      /*$.getJSON(
+        "http://127.0.0.1:3000/classes/" + document.getElementById("studentClasse").value,
+        function (classe) {
+          numeroInscription += classe._id.substring(); // Afficher le nom du client dans la deuxième cellule
+        }
+      );*/
+    
+  for (let i = 0; i < 8; i++) {
+    const indiceAleatoire = Math.floor(Math.random() * 10);
+    numeroInscription += indiceAleatoire.toString();
+  }
+
+  return numeroInscription;
+}
   </script>
 
 <!--Get classe-->

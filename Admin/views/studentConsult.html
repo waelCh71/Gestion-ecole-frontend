@@ -204,6 +204,10 @@
                     <li class="list-group-item">
                         <b >Email</b> <a class="float-right" id="email">ww@</a>
                       </li>
+
+                      <li class="list-group-item">
+                        <b >N° Inscription</b> <a class="float-right" id="numInscription"></a>
+                      </li>
                     
                   </ul>
   
@@ -222,7 +226,7 @@
                 <div class="card-header p-2">
                   <ul class="nav nav-pills">
                     <li class="nav-item"><a class="nav-link active" id="navActivity" href="#activity" data-toggle="tab">General Info</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#inbox" data-toggle="tab">Inbox</a></li>
+                    
                     <li class="nav-item"><a class="nav-link" id="navSettings" href="#settings" data-toggle="tab">Update</a></li>
                   </ul>
                 </div><!-- /.card-header -->
@@ -264,10 +268,6 @@
 
                     </div>
 
-                    <!-- /.tab-pane -->
-                    <div class="tab-pane" id="inbox">
-                      <!--TODO INBOX-->
-                    </div>
                     <!-- /.tab-pane -->
   
                     <div class="tab-pane"  id="settings">
@@ -508,6 +508,9 @@
 
       document.getElementById("email").innerHTML =
          response.email;
+
+         document.getElementById("numInscription").innerHTML =
+          response.numInscription;
 
       document.getElementById("phone").innerHTML =
          response.phone;

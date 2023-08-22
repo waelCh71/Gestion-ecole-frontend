@@ -34,6 +34,20 @@
             </div>
           </div>
         </div>
+        <div class="input-group form-group mb-3">
+          <select name="inputType" id="inputType" class="form-control">
+            <option value="" disabled selected>Select a user</option>
+            <option value="parent">Parent</option>
+            <option value="student">Student</option>
+            
+          </select>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        
 
         <div class="input-group form-group mb-3">
           <input type="password" class="form-control" placeholder="Password" value="password" name="inputPassword" id="inputPassword">
@@ -106,6 +120,9 @@
           required: true,
           email: true,
         },
+        inputType: {
+          required: true
+        }
   
       },
   
@@ -120,6 +137,9 @@
           required: "Please enter your email address",
           email: "Please enter a valid email address"
         },
+        inputType: {
+          required: "Please Select a user"
+        }
   
       },
       errorElement: 'span',
@@ -135,8 +155,20 @@
       }
     });
   });
+
+    function login() {
+      var type=document.getElementById("inputType").value;
+      if (type == "parent") {
+          loginParent();
+        } else {
+          loginStudent();
+        }
+    }
   
-  function login() {
+    </script>
+
+<script>
+  function loginParent() {
     var url = "http://127.0.0.1:3000/users"; 
     var email = document.getElementById("inputEmail").value; 
     var password = document.getElementById("inputPassword").value; 
@@ -171,8 +203,42 @@
     xhr.send();
   }
 
-    </script>
+  function loginStudent() {
+    var url = "http://127.0.0.1:3000/students"; 
+    var email = document.getElementById("inputEmail").value; 
+    var password = document.getElementById("inputPassword").value; 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("GET", url, true); 
+    xhr.setRequestHeader("Content-type", "application/json; charset=utf-8"); 
+    xhr.onload = function () {
+      
+      var students = JSON.parse(xhr.responseText); 
+      if (xhr.readyState == 4 && xhr.status == "200") {
+        
+        access = false; 
+        /* bouclé la liste des utilisateurs */
+        for (i = 0; i < students.length; i++) {
+          if (students[i].email == email && students[i].password == password) {
+            access = true;
+            localStorage.setItem("idStudent", students[i]._id);
+            localStorage.setItem("userName", students[i].nom+" "+students[i].prenom);
+          }
+        }
+        // si la variable accès contient true on est autorisé à accéder.
+        if (access) {
+          alert("Welcome");
+          location.replace("index.html");
+        } else {
+          alert("Invalid Login OR Password");
+        }
+      } else {
+        alert("Error Server Connection");
+      }
+    };
+    xhr.send();
+  }
 
+</script>
 
 </body>
 </html>

@@ -9,7 +9,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Admin </title>
+  <title> Admin | Profile</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -198,15 +198,15 @@
                     <ul class="list-group list-group-unbordered mb-3">
                       
                         <li class="list-group-item">
-                            <b >Nom</b> <a class="float-right" id="nom">ww@</a>
+                            <b >Nom</b> <a class="float-right" id="nom"></a>
                           </li>
 
                           <li class="list-group-item">
-                            <b >Prenom</b> <a class="float-right" id="prenom">ww@</a>
+                            <b >Prenom</b> <a class="float-right" id="prenom"></a>
                           </li>
   
                       <li class="list-group-item">
-                          <b >Email</b> <a class="float-right" id="email">ww@</a>
+                          <b >Email</b> <a class="float-right" id="email"></a>
                         </li>
                       
                     </ul>
@@ -228,6 +228,7 @@
                   <ul class="nav nav-pills">
                     
                     <li class="nav-item"><a class="nav-link active" href="#settings" data-toggle="tab">Update</a></li>
+                    <li class="nav-item"><a class="nav-link " href="#editPassword" data-toggle="tab">Update Password</a></li>
                   </ul>
                 </div><!-- /.card-header -->
                 <div class="card-body">
@@ -237,38 +238,31 @@
 
                       <form class="form-horizontal" id="profileUpdate" onsubmit="return false">
 
-                        <div class="form-group row">
+                        <div class=" row">
                           <label  class="col-sm-2 col-form-label">Nom</label>
-                          <div class="col-sm-10">
+                          <div class="col-sm-10 form-group">
                             <input type="text" class="form-control" name="inputName" id="inputName"  placeholder="nom" >
                           </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="row">
                             <label  class="col-sm-2 col-form-label">Prenom</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-10 form-group">
                               <input type="text" class="form-control" name="inputPrenom"  id="inputPrenom" placeholder="prenom" >
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class=" row">
                           <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                          <div class="col-sm-10">
+                          <div class="col-sm-10 form-group">
                             <input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="Email" >
                           </div>
                         </div>
 
-                          <div class="form-group row">
+                          <div class=" row">
                             <label  class="col-sm-2 col-form-label">Password</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-10 form-group">
                               <input type="password" class="form-control" name="inputPassword" id="inputPassword" >
-                            </div>
-                          </div>
-
-                          <div class="form-group row">
-                            <label  class="col-sm-2 col-form-label">Confirm Password</label>
-                            <div class="col-sm-10">
-                              <input type="password" class="form-control" name="inputConfirmPassword" id="inputConfirmPassword" >
                             </div>
                           </div>
 
@@ -281,7 +275,41 @@
 
                       </form>
                     </div>
-                    <!-- /.tab-pane -->
+                    
+
+                    <div class="tab-pane" id="editPassword">
+
+                      <form class="form-horizontal" id="passwordUpdate" onsubmit="return false">
+  
+                        <div class="form-group row">
+                          <label class="col-sm-2 col-form-label">Password</label>
+                          <div class="col-sm-10 input-group">
+                            <input type="password" class="form-control" name="inputPassword2" id="inputPassword2">
+                          </div>
+                        </div>
+  
+                        <div class="form-group row">
+                          <label class="col-sm-2 col-form-label">New Password</label>
+                          <div class="col-sm-10 input-group">
+                            <input type="text" class="form-control" name="inputNewPassword" id="inputNewPassword">
+                          </div>
+                        </div>
+  
+                        <div class="form-group row">
+                          <label class="col-sm-2 col-form-label">Confirm New Password</label>
+                          <div class="col-sm-10 input-group">
+                            <input type="text" class="form-control" name="inputConfirmNewPassword"
+                              id="inputConfirmNewPassword">
+                          </div>
+                        </div>
+  
+                        <div class="form-group row">
+                          <div class="offset-sm-2 col-sm-10">
+                            <button type="submit" class="btn btn-danger">Submit</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
                   </div>
                   <!-- /.tab-content -->
                 </div><!-- /.card-body -->
@@ -351,18 +379,18 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="../dist/js/pages/dashboard.js"></script>
 
-<!--Student Info-->
+<!--admin Info-->
 <script>
-  var url_string = window.location.href; // ="file:///C:/Users/jabeu/OneDrive/Desktop/PFEHoussem2023/FrontEnd/Admin/viewUser.html?id=64ca2b07baa5565b2caa4735"
-  var url = new URL(url_string); // =file:///C:/Users/jabeu/OneDrive/Desktop/PFEHoussem2023/FrontEnd/Admin/viewUser.html?id=64ca2b07baa5565b2caa4735
-  var c = url.searchParams.get("id"); // =64ca2b07baa5565b2caa4735
-  console.log(c);
+   
+  var c = localStorage.getItem("idA"); 
+  
 
   // Post a user
-  var url3 = "http://127.0.0.1:3000/students/" + c;
+  var url3 = "http://127.0.0.1:3000/admins/" + c;
   var xhr3 = new XMLHttpRequest();
   xhr3.open("GET", url3, true);
 
+  var passwordVerif = "";
   xhr3.onload = function () {
     var response = JSON.parse(xhr3.responseText);
     if (xhr3.readyState == 4 && xhr3.status == "200") {
@@ -389,14 +417,7 @@
 
         document.getElementById("inputEmail").value =
         response.email;
-
-
-        document.getElementById("inputPassword").value =
-        response.password;
-
-        document.getElementById("inputConfirmPassword").value =
-        response.password;
-
+        passwordVerif=response.password;
 
     } else {
       console.log("error");
@@ -406,7 +427,7 @@
   xhr3.send(null);
 </script>
 
-<!--Student Update-->
+<!--admin Update-->
 
 <!-- jquery-validation -->
 <script src="../plugins/jquery-validation/jquery.validate.min.js"></script>
@@ -416,8 +437,8 @@
 
 $.validator.setDefaults({
   submitHandler: function () {
-    alert( "Form successful submitted!" );
-    //ajouter();
+    //alert( "Form successful submitted!" );
+    update();
   }
 });
 
@@ -444,12 +465,6 @@ $('#profileUpdate').validate({
       minlength: 8,
       
     },
-
-    inputConfirmPassword: {
-      required: true,
-      minlength: 8,
-      equalTo: '#inputPassword',
-    },
   },
 
   messages: {
@@ -475,13 +490,6 @@ $('#profileUpdate').validate({
       minlength: "The password must be at least 8 characters long"
     },
 
-    inputConfirmPassword: {
-      required: "Please re-type the password",
-      minlength: "The password must be at least 8 characters long",
-      equalTo: "The password is not confirmed"
-
-    },
-
   },
   
   errorElement: 'span',
@@ -497,6 +505,157 @@ $('#profileUpdate').validate({
   }
 });
 });
+
+function update() {
+
+//console.log("password verif2: "+passwordVerif);
+
+// update a user 
+var url3 = "http://127.0.0.1:3000/admins/" + c;
+var data = {};
+
+data.nom = document.getElementById("inputName").value;
+data.prenom = document.getElementById("inputPrenom").value;
+data.email = document.getElementById("inputEmail").value;
+
+
+if (!(document.getElementById("inputPassword").value == passwordVerif)) {
+  alert("Wrong Password");
+  return false;
+}
+
+data.password = document.getElementById("inputPassword").value;
+
+var json = JSON.stringify(data); // Convertir la variable de données en JSON.
+var xhr = new XMLHttpRequest();
+xhr.open("PUT", url3, true);
+xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
+
+
+// Load les données à partir de la serveur -> début connection
+xhr.onload = function () {
+  var response = JSON.parse(xhr.responseText); // Conversion des données en format json
+  // Si le status retourné par le serveur est 200
+  if (xhr.readyState == 4 && xhr.status == "200") {
+    //alert("Classe Added");
+    location.replace("profile.html");
+  } else {
+    alert(response.message);
+    console.table(response);
+  }
+};
+xhr.send(json);
+}
+
+
+</script>
+
+<!--Update Password-->
+<script>
+  $(function () {
+
+    $.validator.setDefaults({
+      submitHandler: function () {
+        //alert( "Form successful submitted!" );
+        updatePassword();
+      }
+    });
+
+    $('#passwordUpdate').validate({
+      rules: {
+
+        inputPassword2: {
+          required: true,
+          minlength: 8,
+
+        },
+
+        inputNewPassword: {
+          required: true,
+          minlength: 8,
+        },
+
+        inputConfirmNewPassword: {
+          required: true,
+          minlength: 8,
+          equalTo: '#inputNewPassword',
+
+        },
+      },
+
+      messages: {
+
+        inputPassword2: {
+          required: "Please enter your password",
+          minlength: "The password must be at least 8 characters long"
+        },
+
+        inputNewPassword: {
+          required: "Please enter a new password",
+          minlength: "The password must be at least 8 characters long"
+        },
+
+        inputConfirmNewPassword: {
+          required: "Please confirm you new password",
+          minlength: "The password must be at least 8 characters long",
+          equalTo: "The new password is not confirmed"
+        },
+
+      },
+
+      errorElement: 'span',
+      errorPlacement: function (error, element) {
+        error.addClass('invalid-feedback');
+        element.closest('.input-group').append(error);
+      },
+      highlight: function (element, errorClass, validClass) {
+        $(element).addClass('is-invalid');
+      },
+      unhighlight: function (element, errorClass, validClass) {
+        $(element).removeClass('is-invalid');
+      }
+    });
+  });
+
+  function updatePassword() {
+
+     
+    var url3 = "http://127.0.0.1:3000/admins/" + c;
+    var data = {};
+
+    data.nom = document.getElementById("inputName").value;
+    data.prenom = document.getElementById("inputPrenom").value;
+    data.email = document.getElementById("inputEmail").value;
+
+
+    if (!(document.getElementById("inputPassword2").value == passwordVerif)) {
+      alert("Wrong Password");
+      return false;
+    }
+
+    data.password = document.getElementById("inputNewPassword").value;
+
+    var json = JSON.stringify(data); // Convertir la variable de données en JSON.
+    var xhr = new XMLHttpRequest();
+    xhr.open("PUT", url3, true);
+    xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
+
+
+    // Load les données à partir de la serveur -> début connection
+    xhr.onload = function () {
+      var response = JSON.parse(xhr.responseText); // Conversion des données en format json
+      // Si le status retourné par le serveur est 200
+      if (xhr.readyState == 4 && xhr.status == "200") {
+        //alert("Classe Added");
+        location.replace("profile.html");
+      } else {
+        alert(response.message);
+        console.table(response);
+      }
+    };
+    xhr.send(json);
+  }
+
 
 </script>
 

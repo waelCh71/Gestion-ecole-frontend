@@ -184,9 +184,9 @@
           
           <div class="row">
               <div class="col-md-8 offset-md-2">
-                  <form action="###">
+                  <form onkeyup="filter();">
                       <div class="input-group">
-                          <input type="search" class="form-control form-control-lg" placeholder="Search for a user">
+                          <input type="search" id="searchInput" class="form-control form-control-lg" placeholder="Search for a user">
                           <div class="input-group-append">
                               <button type="submit" class="btn btn-lg btn-default">
                                   <i class="fa fa-search"></i>
@@ -207,15 +207,10 @@
                 
 
                 <div class="card-tools">
-                 <!-- <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                  <div class="input-group input-group-sm" style="width: 150px;">
 
-                    <div class="input-group-append">
-                      <button type="submit" class="btn btn-default">
-                        <i class="fas fa-search"></i>
-                      </button>
-                    </div>
-                  </div>-->
+                    <span class="float-right "> <a href="addUser.html" ><i class="fas fa-plus"></i> add user</a> </span>
+                  </div>
                 </div>
               </div>
               <!-- /.card-header -->
@@ -345,6 +340,61 @@
   // Send request
   request.send();
 </script>
+
+<!--Search-->
+<script>
+ 
+  function filter(){
+   var searchInput = document.getElementById("searchInput");
+ var tbody = document.getElementById("listUsers");
+ //var tbody = table.querySelector("tbody");
+ var rows = tbody.getElementsByTagName("tr");
+ 
+ var searchText = searchInput.value.toLowerCase();
+ 
+     // Loop through the table rows and hide/show based on the search input
+     for (var i = 0; i < rows.length; i++) {
+         var row = rows[i];
+         var cells = row.getElementsByTagName("td");
+         var shouldShowRow = false;
+ 
+         // Loop through the cells in the row
+         for (var j = 0; j < cells.length; j++) {
+             var cell = cells[j];
+             var cellText = cell.textContent.toLowerCase();
+ 
+             
+             // Check if the cell content contains the search text
+             if (cellText.indexOf(searchText) !== -1) {
+                 shouldShowRow = true;
+                 break;
+             }
+         }
+ 
+         var fullCell =cells[1].textContent.toLocaleLowerCase()+" "+cells[2].textContent.toLocaleLowerCase();
+             
+             if ( fullCell.indexOf(searchText) !== -1) {
+                 shouldShowRow = true;
+                 
+             }
+ 
+             var fullCell2 =cells[2].textContent.toLocaleLowerCase()+" "+cells[1].textContent.toLocaleLowerCase();
+             
+             if ( fullCell2.indexOf(searchText) !== -1) {
+                 shouldShowRow = true;
+                 
+             }
+ 
+         // Show or hide the row based on the search result
+         if (shouldShowRow) {
+             row.style.display = "";
+         } else {
+             row.style.display = "none";
+         }
+     }
+  }
+ 
+ </script>
 
 <script>
   document.getElementById("userName").innerHTML= localStorage.getItem("usernameA");

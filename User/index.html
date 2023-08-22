@@ -1,10 +1,4 @@
-<script>
-  if (!localStorage.getItem("idUser")) {
-    document.getElementById("navBar").innerHTML += '<li class="nav-item" id="login"><a href="signIn.html" class="nav-link"><button type="button" class="btn btn-primary">Log In</button></a></li>'
-  }else{
-    document.getElementById("navBar").innerHTML += '<li class="nav-item s-nav" ><a  title="Profile" class="nav-link nav-links"><div class="menu-user-image"><img src="images/bg_2.jpg" id="profilePic" class="menu-user-img ml-1" alt=""> </div></a></li>'
-  }
-</script>
+
 
 
 <!DOCTYPE html>
@@ -69,9 +63,9 @@
 <li class="nav-item "><a href="about.html" class="nav-link">About</a></li>
 <li class="nav-item"><a href="teacher.html" class="nav-link">Teacher</a></li>
 
-<li class="nav-item"><a href="studentSpace.html" class="nav-link">Student Space</a></li>
+<li class="nav-item" ><a href="studentSpace.html" id="studentSpace" class="nav-link">Student Space</a></li>
 <li class="nav-item"><a href="event.html" class="nav-link">Event</a></li>
-<li class="nav-item"><a href="requestPaper.html" class="nav-link">Request Paper</a></li>
+<li class="nav-item" id="requestPaper"><a href="requestPaper.html" class="nav-link">Request Paper</a></li>
 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 
   
@@ -646,19 +640,39 @@ newItem.className = "nav-item";
 
 
 
-if (!localStorage.getItem("idUser")) {
+if (!localStorage.getItem("idUser") && !localStorage.getItem("idStudent")) {
     
     newItem.innerHTML = '<a href="signIn.html" class="nav-link"><button type="button" class="btn btn-primary">Log In</button></a>';  
   }else{
     
-    newItem.innerHTML = '<a href="profile.html" title="Profile" class="nav-link nav-links"><div class="menu-user-image"><img src="images/profile.png" class="menu-user-img ml-1" alt=""> </div></a>';
+    newItem.innerHTML = '<a href="#" onclick="goToProfile();" title="Profile" class="nav-link nav-links"><div class="menu-user-image"><img src="images/profile.png" class="menu-user-img ml-1" alt=""> </div></a>';
   }
 
   navBar.appendChild(newItem);
+
+  var liElement = document.getElementById("requestPaper");
+
+  var a = document.getElementById("studentSpace");
+  if(!localStorage.getItem("idUser")){
+    
+    a.href="studentConsult.html?id="+localStorage.getItem("idStudent");
+    liElement.remove();
+    }else{
+      a.href="studentSpace.html";
+
+    }
+
+
+  function goToProfile() {
+    if(!localStorage.getItem("idUser")){
+      location.replace("profileStudent.html");
+    }else{
+      location.replace("profileParent.html");
+    }
+  }
 </script>
 
 
 </body>
 
-<!-- Mirrored from preview.colorlib.com/theme/kiddos/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Aug 2023 17:44:55 GMT -->
 </html>

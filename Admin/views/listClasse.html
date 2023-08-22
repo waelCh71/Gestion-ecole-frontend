@@ -182,9 +182,9 @@
           
           <div class="row">
               <div class="col-md-8 offset-md-2">
-                  <form action="###">
+                  <form onkeyup="filter();">
                       <div class="input-group">
-                          <input type="search" class="form-control form-control-lg" placeholder="Search class">
+                          <input type="search" class="form-control form-control-lg" id="searchInput" placeholder="Search class">
                           <div class="input-group-append">
                               <button type="submit" class="btn btn-lg btn-default">
                                   <i class="fa fa-search"></i>
@@ -205,15 +205,10 @@
                 
 
                 <div class="card-tools">
-                 <!-- <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                 <div class="input-group input-group-sm" style="width: 150px;">
 
-                    <div class="input-group-append">
-                      <button type="submit" class="btn btn-default">
-                        <i class="fas fa-search"></i>
-                      </button>
-                    </div>
-                  </div>-->
+                    <span class="float-right "> <a href="addClasse.html" ><i class="fas fa-plus"></i> add classe</a> </span>
+                  </div>
                 </div>
               </div>
               <!-- /.card-header -->
@@ -224,6 +219,7 @@
                         <th>N°</th>
                       <th>Classe</th>
                       <th>Description</th>
+                      <th>Absence</th>
                       <th class="text-center" colspan="2"></th>
                       
                     </tr>
@@ -324,15 +320,17 @@
         var cell4 = row.insertCell(3);
         var cell5 = row.insertCell(4);
         var cell6 = row.insertCell(5);
+        
 
         cell1.innerHTML = j;
         cell2.innerHTML = i.nom;
         cell3.innerHTML = i.description;
 
+        cell4.innerHTML = '<a href="classeAbsence.html?id='+i._id+'">  Absence</a>' ;
        
 
-        cell4.innerHTML = '<a href="classeConsult.html?id='+i._id+'">  <i class="fas fa-eye"></i></a>' ;
-        cell5.innerHTML = '<a href="deleteObject.html?id='+i._id+ '&object=classes&redirect=listClasse"> <i class="fas fa-trash-alt"></i></a>';
+        cell5.innerHTML = '<a href="classeConsult.html?id='+i._id+'">  <i class="fas fa-eye"></i></a>' ;
+        cell6.innerHTML = '<a href="deleteObject.html?id='+i._id+ '&object=classes&redirect=listClasse"> <i class="fas fa-trash-alt"></i></a>';
         
         j = j + 1;
       });
@@ -341,11 +339,44 @@
     request.send();
   </script>
 
-  <script>
-    function deleteClasse(id){
-      alert("working: "+ id);
-    }
-  </script>
+
+<!--Search-->
+<script>
+ 
+  function filter(){
+   var searchInput = document.getElementById("searchInput");
+ var tbody = document.getElementById("listClasse");
+ //var tbody = table.querySelector("tbody");
+ var rows = tbody.getElementsByTagName("tr");
+ 
+ var searchText = searchInput.value.toLowerCase().replace(/\s/g, '');
+ 
+     // Loop through the table rows and hide/show based on the search input
+     for (var i = 0; i < rows.length; i++) {
+         var row = rows[i];
+         var cells = row.getElementsByTagName("td");
+         var shouldShowRow = false;
+ 
+         var cell = cells[1];
+             var cellText = cell.textContent.toLowerCase().replace(/\s/g, '');
+ 
+             
+             // Check if the cell content contains the search text
+             if (cellText.indexOf(searchText) !== -1) {
+                 shouldShowRow = true;
+             }
+ 
+         // Show or hide the row based on the search result
+         if (shouldShowRow) {
+             row.style.display = "";
+         } else {
+             row.style.display = "none";
+         }
+     }
+  }
+ 
+ </script>
+  
 
 <script>
   document.getElementById("userName").innerHTML= localStorage.getItem("usernameA");

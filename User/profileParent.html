@@ -517,6 +517,7 @@
   <script src="plugins/jquery-validation/jquery.validate.min.js"></script>
   <script src="plugins/jquery-validation/additional-methods.min.js"></script>
 
+  <!--Update Info-->
   <script>
 
     //console.log("password verif1: "+passwordVerif);
@@ -664,7 +665,7 @@
         // Si le status retourné par le serveur est 200
         if (xhr.readyState == 4 && xhr.status == "200") {
           //alert("Classe Added");
-          location.replace("profile.html");
+          location.replace("profileParent.html");
         } else {
           alert(response.message);
           console.table(response);
@@ -782,7 +783,7 @@
         // Si le status retourné par le serveur est 200
         if (xhr.readyState == 4 && xhr.status == "200") {
           //alert("Classe Added");
-          location.replace("profile.html");
+          location.replace("profileParent.html");
         } else {
           alert(response.message);
           console.table(response);

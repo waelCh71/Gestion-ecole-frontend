@@ -180,11 +180,17 @@
 
     <div class="col">
         <div class="card">
-          <div class="card-header p-2">
+          <div class="card-header ">
+
             <ul class="nav nav-pills">
               <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Activity</a></li>
               
             </ul>
+            
+            <div class="card-tools" style="width: 150px;">
+              <span class="float-right "> <a href="addEvent.html" ><i class="fas fa-plus"></i> add event</a> </span>
+
+             </div>
           </div><!-- /.card-header -->
           <div class="card-body">
             <div class="tab-content">
@@ -197,9 +203,6 @@
 
                 </div>
                 
-
-                
-
                 <!-- Post -->
                 <div class="post">
                   <div class="user-block">
@@ -327,23 +330,30 @@
     // Begin accessing JSON data here
     var data = JSON.parse(this.response);
 
-    var post = document.getElementById("posts");
-    
-    var j = 1;
+    "deleteObject.html?id=' + i._id + '&object=events&redirect=events";
     data.forEach((i) => {
+    var post = document.getElementById("posts");
+    var htmlContent = '';
 
+    htmlContent += 
+        '<div class="user-block"> <img class="img-circle img-bordered-sm" src="../dist/img/eventImage.jpg" alt="event image"> <span class="username"> <a href="#" id="eventName">'
+        + i.nom + ' </a> <span class="float-right btn-tool"> <a href="eventUpdate.html?id='+i._id+'" ><i class="fas fa-edit"></i></a>'
+        +' <a href="deleteObject.html?id=' + i._id + '&object=events&redirect=events" ><i class="fas fa-times"></i></a></span></span><span class="description" id="eventDate">'
+        + i.dateEvenement + '</span> </div> <p id="eventDescription">'
+        + i.description + '</p>';
 
-      document.getElementById("posts").innerHTML += 
+    if (i.mediaLink.length > 1) {
+        htmlContent +=
+            `<div class="row mb-3"> <div class="col-sm-6">
+                  <img class="img-fluid" src="` + i.mediaLink + `" alt="Photo">
+                </div></div><hr>`;
+    } else {
+        htmlContent += '<hr>';
+    }
 
-      '<div class="user-block"> <img class="img-circle img-bordered-sm" src="../dist/img/eventImage.jpg" alt="event image"> <span class="username"> <a href="#" id="eventName">'
-        +i.nom+' </a> <a href="deleteObject.html?id='+i._id+ '&object=events&redirect=events" class="float-right btn-tool"><i class="fas fa-times"></i></a> <a href="#" class="float-right btn-tool"><i class="fas fa-edit"></i></a></span><span class="description" id="eventDate">'
-          +i.dateEvenement+'</span> </div> <p id="eventDescription">'
-            +i.description+'</p><hr>';
-
-      
-      
-      console.log(i);
-    });
+    // Insert the new HTML content at the beginning of the container
+    post.insertAdjacentHTML("afterbegin", htmlContent);
+});
   };
   // Send request
   request.send();

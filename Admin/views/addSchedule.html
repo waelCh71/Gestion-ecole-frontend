@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> Add Schedule </title>
@@ -188,37 +189,28 @@
                 <div class="form-group">
                   <label>Classe</label>
                   <select class="form-control" id="inputClasse" name="inputClasse">
+                    <option value="" disabled selected>Select a classe</option>
                     
                   </select>
                 </div>
               </div>
+
+              <div class="col-sm-6">
+                <!-- select -->
+                <div class="form-group">
+                  <label>Schedule</label>
+                  
+                  <span class="btn btn-success col button" onclick="uploadFile();">
+                    
+                    <i class="fas fa-plus"></i>
+                    <span>Add files</span>
+                    <input  type="hidden" id="i" name="i"/>
+                  </span>
+                </div>
+              </div>
               </div>
 
-              <div id="actions" class="row">
-                <div class="col-lg-6">
-                  <div class="btn-group w-100">
-                    <span class="btn btn-success col fileinput-button">
-                      <i class="fas fa-plus"></i>
-                      <span>Add files</span>
-                    </span>
-                    <button type="submit" class="btn btn-primary col start">
-                      <i class="fas fa-upload"></i>
-                      <span>Start upload</span>
-                    </button>
-                    <button type="reset" class="btn btn-warning col cancel">
-                      <i class="fas fa-times-circle"></i>
-                      <span>Cancel upload</span>
-                    </button>
-                  </div>
-                </div>
-                <div class="col-lg-6 d-flex align-items-center">
-                  <div class="fileupload-process w-100">
-                    <div id="total-progress" class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-                      <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
 
               <div class="table table-striped files" id="previews">
                 <div id="template" class="row mt-2">
@@ -239,18 +231,12 @@
                   </div>
                   <div class="col-auto d-flex align-items-center">
                     <div class="btn-group">
-                      <button class="btn btn-primary start">
-                        <i class="fas fa-upload"></i>
-                        <span>Start</span>
-                      </button>
+                      
                       <button data-dz-remove class="btn btn-warning cancel">
                         <i class="fas fa-times-circle"></i>
                         <span>Cancel</span>
                       </button>
-                      <button data-dz-remove class="btn btn-danger delete">
-                        <i class="fas fa-trash"></i>
-                        <span>Delete</span>
-                      </button>
+                      
                     </div>
                   </div>
                 </div>
@@ -259,7 +245,7 @@
             </div>
 
             <div class="card-footer">
-              <button type="submit" onclick="ajouter();" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
             </div>
           </form>
         </div>
@@ -353,7 +339,9 @@
   
     myDropzone.on("addedfile", function(file) {
       // Hookup the start button
-      file.previewElement.querySelector(".start").onclick = function() { myDropzone.enqueueFile(file) }
+      file.previewElement.querySelector(".start").onclick = function() { 
+        //uploadFile();
+       }
     })
   
     // Update the total progress bar
@@ -380,10 +368,15 @@
       myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED))
     }
     document.querySelector("#actions .cancel").onclick = function() {
-      myDropzone.removeAllFiles(true)
+      myDropzone.removeAllFiles(true);
+      document.getElementById("i").value= null;
     }
     // DropzoneJS Demo Code End
   </script>
+
+  <!-- jquery-validation -->
+<script src="../plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="../plugins/jquery-validation/additional-methods.min.js"></script>
 
 <script>
 
@@ -402,6 +395,10 @@
         inputClasse: {
           required: true,
         },
+
+        i:{
+          required:true
+        }
   
       },
   
@@ -410,6 +407,10 @@
         inputClasse: {
           required: "Please enter a Classe",
         },
+
+        i:{
+          required:"Please upload the schedule"
+        }
   
       },
       errorElement: 'span',
@@ -426,6 +427,19 @@
     });
   });
   
+  function uploadFile() {
+        var i = document.getElementById("i");
+
+        const apikey = "ABFntY0smQ8O3Xu95pBQhz";
+        const client = filestack.init(apikey);
+        const options = {
+          maxFiles: 20,
+          uploadInBackground: false,
+          onOpen: () => console.log("opened!"),
+          onUploadDone: (res) => (i.value = res.filesUploaded[0].url),
+        };
+        client.picker(options).open();
+      }
   
   
       function ajouter() {
@@ -433,11 +447,16 @@
         
         var url = "http://127.0.0.1:3000/emplois"; // Définir la collection à manipuler
         // Récupère les données saisies dans la variable data.
+
+        if(!document.getElementById("i").value){
+          alert("please upload the schedule");
+          return false;
+        }
   
         var data = {};
         
         data.idClasse = document.getElementById("inputClasse").value; 
-        data.mediaLink = "";
+        data.mediaLink = document.getElementById("i").value;
         
         var json = JSON.stringify(data); // Convertir la variable de données en JSON.
         var xhr = new XMLHttpRequest(); 
