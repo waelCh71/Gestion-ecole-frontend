@@ -10,7 +10,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Admin | Absence</title>
+    <title> Admin | Grades</title>
+
+    <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -108,7 +110,7 @@
           <br>
       
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link ">
               <i class="fas fa-user-graduate"></i>
               <p>
                 Students
@@ -293,31 +295,18 @@
                                     <div class="col-6">
                                         <!-- Date and time -->
                                         <div class="form-group">
-                                            <label>Date and time:</label>
-                                            <div class="input-group date" id="reservationdatetime"
-                                                data-target-input="nearest">
-                                                <input type="text" class="form-control datetimepicker-input"
-                                                    data-target="#reservationdatetime" id="inputDateTime" name="inputDateTime"/>
-                                                <div class="input-group-append" data-target="#reservationdatetime"
-                                                    data-toggle="datetimepicker">
-                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                                </div>
-                                            </div>
+                                            <div class="select-wrap">
+                                                <label> Semestre</label>
+                                                <select name="inputSemestre" id="inputSemestre" class="form-control">
+                                                  <option value="" disabled selected>Select an option</option>
+                                                  <option >S1</option>
+                                                  <option >S2</option>
+                                                  <option >S3</option>
+                                                </select>
+                                              </div>
+                                            
                                         </div>
                                     </div>
-
-                                    <div class="col-6">
-                                        <!-- Date and time -->
-                                        <div class="form-group">
-                                            <label>Seance:</label>
-                                            <div class="input-group" >
-                                                <input type="text" class="form-control" id="seance" name="seance"/>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-
-
                                 </div>
 
                             </div>
@@ -357,9 +346,8 @@
                                         <th>PRENOM</th>
                                         <th>EMAIL</th>
                                         
-                                        <th>Absent</th>
-                                        <th>Retard</th>
-                                        <th>Exclu</th>
+                                        <th>Grades</th>
+                                        
                                         <th></th>
 
                                     </tr>
@@ -440,61 +428,11 @@
         }
       </style>
 
-    <script>
-        $(function () {
-      
-      
-          //Date picker
-          $('#reservationdate').datetimepicker({
-              format: 'L'
-          });
-      
-          //Date and time picker
-          $('#reservationdatetime').datetimepicker({ icons: { time: 'far fa-clock' } });
-      
-          //Date range picker
-          $('#reservation').daterangepicker()
-          //Date range picker with time picker
-          $('#reservationtime').daterangepicker({
-            timePicker: true,
-            timePickerIncrement: 30,
-            locale: {
-              format: 'MM/DD/YYYY hh:mm A'
-            }
-          });
-          //Date range as a button
-          $('#daterange-btn').daterangepicker(
-            {
-              ranges   : {
-                'Today'       : [moment(), moment()],
-                'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
-                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                'This Month'  : [moment().startOf('month'), moment().endOf('month')],
-                'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-              },
-              startDate: moment().subtract(29, 'days'),
-              endDate  : moment()
-            },
-            function (start, end) {
-              $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
-            }
-          );
-      
-          //Timepicker
-          $('#timepicker').datetimepicker({
-            format: 'LT'
-          });
-      
-          
-        });
-        
-      </script>
-
       <!-- jquery-validation -->
 <script src="../plugins/jquery-validation/jquery.validate.min.js"></script>
 <script src="../plugins/jquery-validation/additional-methods.min.js"></script>
 
+      <!--Students info-->
     <script>
 
         var url_string = window.location.href;
@@ -536,98 +474,110 @@
                     var cell4 = row.insertCell(3);
                     var cell5 = row.insertCell(4);
                     var cell6 = row.insertCell(5);
-                    var cell7 = row.insertCell(6);
-                    var cell8 = row.insertCell(7);
                     
-                    
-
                     cell1.innerHTML = j;
                     cell2.innerHTML = i.nom;
                     cell3.innerHTML = `<a href="studentConsult.html?id=`+i._id+`">`+i.prenom+`</a>`;
                     cell4.innerHTML = i.email;
                     
 
-                    cell5.innerHTML = `<input  type="radio" onchange="activeBtnConfirm('${i._id}')" value="absent" id="customRadio${j}1" name="customRadio${j}">
-                    `;
+                    cell5.innerHTML = `
+                 
+                    <div class="row" id="upload${i._id}">
+                  <div class="form-group" >
+                      <span class="btn btn-success col" onclick="uploadFile('${(i._id).toString()}');">
+                        
+                        <i class="fas fa-plus"></i>
+                        <span>Upload Media</span>
+                        <input  type="hidden" id="i`+i._id+`" name="i"/>
+                      </span>
+                      
+                  </div>
+              </div>`;
 
-                    cell6.innerHTML = `<input  type="radio" onchange="activeBtnConfirm('${i._id}')" value="retard" id="customRadio${j}2" name="customRadio${j}">
-                    `;
-                    cell7.innerHTML = `<input  type="radio" onchange="activeBtnConfirm('${i._id}')" value="exclu" id="customRadio${j}3" name="customRadio${j}">
-                    `;
-                    cell8.innerHTML = `<div id="`+i._id+`">
-                    <button type="submit" disabled class="btn btn-primary btn-block" id="btn`+i._id+`" onclick="verif('${(i._id).toString()}','customRadio${j}');">Confirm</button>
+                    var fullName=i.nom+" "+i.prenom;
+                   
+                    cell6.innerHTML = `<div id="`+i._id+`">
+                    <button type="submit" disabled class="btn btn-primary btn-block" id="btn`+i._id+`" onclick="verif('${(i._id).toString()}','${fullName}');">Confirm</button>
                     </div>`;
 
                     j = j + 1;
                 }
             });
-
         };
         // Send request
         request.send();
     </script>
 
+    <!--Upload + add grades-->
     <script>
 
-    function verif(idStudent,radio) {
+function uploadFile(id) {
+        //var i = document.getElementById("i"+id);
+        //alert(id);
+        
+        const apikey = "ABFntY0smQ8O3Xu95pBQhz";
+        const client = filestack.init(apikey);
+        const options = {
+          maxFiles: 1,
+          uploadInBackground: false,
+          onOpen: () => console.log("opened!"),
+          onUploadDone: (res) => {
+            
+            //i.value = res.filesUploaded[0].url;
+
+                document.getElementById("upload"+id).innerHTML=`
+                <div class="form-group">
+                    <span ><img id="image" src="../dist/img/pdfImage.jpg"  width="40px" height="40px"/></span>
+                    <span class="float-right btn-tool"><a href="" onclick="deleteFile('${id}')"><i class="fas fa-times"></i></a></span>
+                    <input  type="hidden" id="i`+id+`" value="`+res.filesUploaded[0].url+`" name="i"/>
+                    </div>`;
+                //alert(document.getElementById("upload"+id).innerHTML);
+                document.getElementById("btn"+id).disabled=false;
+          },
+        };
+        client.picker(options).open();
+      }
+
+    function verif(idStudent,fullName) {
         
         var j = 0;
-        var inputDateTime = document.getElementById("inputDateTime").value; // Récupération de la variable username saisir dans notre code html
-        var seance = document.getElementById("seance").value; // Récupération de la variable email saisir dans notre code html
+        var inputSemestre = document.getElementById("inputSemestre").value; 
         
 
-        if (!inputDateTime) {
+        if (!inputSemestre) {
           j++;
-          document.getElementById("inputDateTime").classList.remove("bord2");
-          document.getElementById("inputDateTime").classList.add("bord1");
+          document.getElementById("inputSemestre").classList.remove("bord2");
+          document.getElementById("inputSemestre").classList.add("bord1");
         } else {
-          document.getElementById("inputDateTime").classList.remove("bord1");
-          document.getElementById("inputDateTime").classList.add("bord2");
-        }
-        if (!seance) {
-          j++;
-          document.getElementById("seance").classList.remove("bord2");
-          document.getElementById("seance").classList.add("bord1");
-        } else {
-          document.getElementById("seance").classList.remove("bord1");
-          document.getElementById("seance").classList.add("bord2");
+          document.getElementById("inputSemestre").classList.remove("bord1");
+          document.getElementById("inputSemestre").classList.add("bord2");
         }
 
         if (j == 0) {
-            document.getElementById("inputDateTime").classList.remove("bord2");
-            document.getElementById("seance").classList.remove("bord2");
-          //alert();
-          addAbsence(idStudent,radio);
+            document.getElementById("inputSemestre").classList.remove("bord2");
+            
+          //alert(idStudent);
+          addGrade(idStudent,fullName);
         }
         //
       }
       
    
-  function addAbsence(idStudent,radio) {
+  function addGrade(idStudent,fullName) {
     
-    // Récupère les données saisies dans la variable data.
-    //var radioButtons= document.getElementsByName(radio);
-    const radioButtons = document.querySelectorAll('input[name="'+radio+'"]');
 
-    var typeAbsence="";
+    //alert(document.getElementById("i"+idStudent));
+    var semestre= document.getElementById("inputSemestre").value;
 
-    radioButtons.forEach((radioButton) => {
-       // var selectedValue = document.querySelector('input[name="'+radio+'"]:checked').value;
-       if(radioButton.checked){
-        typeAbsence=radioButton.value;
-       }
-  });
-
-
-  var url = "http://127.0.0.1:3000/absences"; 
+  var url = "http://127.0.0.1:3000/notes"; 
     var data = {};
 
     data.idStudent = idStudent; 
-      data.dateAbsence = document.getElementById("inputDateTime").value.substring(0,10);
-      data.timeAbsence = document.getElementById("inputDateTime").value.substring(11,16);
-      data.type = typeAbsence;
-      
-      data.seance = document.getElementById("seance").value;
+
+      data.nom = fullName+"_Bulletin "+semestre;
+
+      data.mediaLink = document.getElementById("i"+idStudent).value;
 
       data.remarque= "";
 
@@ -697,12 +647,26 @@
     }
   </script>
 
-<script>
-    function activeBtnConfirm(id){
-        document.getElementById("btn"+id).disabled=false;
-       //alert(id);
-    }
-  </script>
+    <script>
+        function deleteFile(id){
+
+            document.getElementById("btn"+id).disabled=true;
+
+            var i = document.getElementById("i"+id).value= "";
+
+
+            document.getElementById("upload"+id).innerHTML=`
+            <div class="form-group" >
+                      <span class="btn btn-success col" onclick="uploadFile('${id}');">
+                        
+                        <i class="fas fa-plus"></i>
+                        <span>Upload Media</span>
+                        <input  type="hidden" id="i`+id+`" name="i"/>
+                      </span>
+                      
+                  </div>`;
+        }
+    </script>
 
     <script>
         document.getElementById("userName").innerHTML = localStorage.getItem("usernameA");

@@ -51,7 +51,7 @@
         <a href="../index.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="navBar.html" class="nav-link">Contact</a>
+        <a href="mailBox.html" class="nav-link">Inbox</a>
       </li>
     </ul>
   </nav>
@@ -62,7 +62,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <br>
     <!-- Brand Logo -->
-    <a href="../index3.html" class="brand-link">
+    <a href="#" class="brand-link">
       <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Admin</span>
     </a>
@@ -76,7 +76,7 @@
           <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="profile.html" class="d-block" id="userName"></a>
         </div>
       </div>
 
@@ -118,7 +118,32 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="listStudent.html" class="nav-link">
+                <a href="listStudent.html" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <br>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link ">
+              <i class="fas fa-school"></i>
+              <p>
+                Classes
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="addClasse.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ADD</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="listClasse.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>List</p>
                 </a>
@@ -150,6 +175,81 @@
               </li>
             </ul>
           </li>
+
+
+          <br>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-calendar-alt"></i>
+              <p>
+                Events
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="addEvent.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ADD</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="events.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Event</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <br>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-user-cog"></i>
+              <p>
+                Users
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="addUser.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ADD</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="listUser.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <br>
+          <li class="nav-item">
+            <a href="demande.html" class="nav-link">
+              <i class="fas fa-file"></i>
+              <p>
+                Paper Request 
+              </p>
+            </a>
+          </li>
+
+          <br>
+          <li class="nav-item">
+            <a href="" onclick="logout();" class="nav-link">
+              <i class="fas fa-sign-out-alt"></i>
+              <p>
+                Log Out
+                
+              </p>
+            </a>
+            
+          </li>
+
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -348,9 +448,9 @@
       cell6.innerHTML = i.dateDeNaissance;
       `<a href="studentConsult.html?id=` +i._id +`"><i class="fa fa-eye"></i></a>`;
 
-      cell7.innerHTML =       `<a href="studentConsult.html?id=` +i._id +`"><i class="fa fa-eye"></i></a>`;
+      cell7.innerHTML =       `<a href="studentConsult.html?id=` +i._id +`&i=consult"><i class="fa fa-eye"></i></a>`;
       
-      cell8.innerHTML = `<a href="studentConsult.html?id=` +i._id +`"><i class="fas fa-edit"></i></a>` ;
+      cell8.innerHTML = `<a href="studentConsult.html?id=` +i._id +`&i=update"><i class="fas fa-edit"></i></a>` ;
       cell9.innerHTML = '<a href="deleteObject.html?id='+i._id+ '&object=students&redirect=listStudent"> <i class="fas fa-trash-alt"></i></a>';
 
       j = j + 1;
@@ -360,6 +460,44 @@
   request.send();
 </script>
 
+<!--TRI-->
+<script>
+  const myTimeout = setTimeout(sortTable, 300);
+  function sortTable() {
+    var table, rows, switching, i, x, y, shouldSwitch;
+    table = document.getElementById("listStudent");
+    switching = true;
+    /*Make a loop that will continue until
+  no switching has been done:*/
+    while (switching) {
+      //start by saying: no switching is done:
+      switching = false;
+      rows = table.rows;
+      /*Loop through all table rows (except the
+    first, which contains table headers):*/
+      for (i = 0; i < rows.length - 1; i++) {
+        //start by saying there should be no switching:
+        shouldSwitch = false;
+        /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+        x = rows[i].getElementsByTagName("TD")[1];
+        y = rows[i + 1].getElementsByTagName("TD")[1];
+        //check if the two rows should switch place:
+        if (x.innerHTML > y.innerHTML) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+      if (shouldSwitch) {
+        /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+        switching = true;
+      }
+    }
+  }
+</script>
 
 <!--Search-->
 <script>

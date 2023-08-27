@@ -51,7 +51,7 @@
         <a href="../index.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="navBar.html" class="nav-link">Contact</a>
+        <a href="mailBox.html" class="nav-link">Inbox</a>
       </li>
     </ul>
   </nav>
@@ -62,7 +62,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <br>
     <!-- Brand Logo -->
-    <a href="../index3.html" class="brand-link">
+    <a href="#" class="brand-link">
       <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Admin</span>
     </a>
@@ -76,7 +76,7 @@
           <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="profile.html" class="d-block" id="userName"></a>
         </div>
       </div>
 
@@ -103,7 +103,7 @@
           <br>
       
           <li class="nav-item">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link ">
               <i class="fas fa-user-graduate"></i>
               <p>
                 Students
@@ -119,6 +119,31 @@
               </li>
               <li class="nav-item">
                 <a href="listStudent.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <br>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link ">
+              <i class="fas fa-school"></i>
+              <p>
+                Classes
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="addClasse.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ADD</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="listClasse.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>List</p>
                 </a>
@@ -150,6 +175,81 @@
               </li>
             </ul>
           </li>
+
+
+          <br>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-calendar-alt"></i>
+              <p>
+                Events
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="addEvent.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ADD</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="events.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Event</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <br>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link active">
+              <i class="fas fa-user-cog"></i>
+              <p>
+                Users
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="addUser.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ADD</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="listUser.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <br>
+          <li class="nav-item">
+            <a href="demande.html" class="nav-link">
+              <i class="fas fa-file"></i>
+              <p>
+                Paper Request 
+              </p>
+            </a>
+          </li>
+
+          <br>
+          <li class="nav-item">
+            <a href="" onclick="logout();" class="nav-link">
+              <i class="fas fa-sign-out-alt"></i>
+              <p>
+                Log Out
+                
+              </p>
+            </a>
+            
+          </li>
+
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -166,7 +266,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0" id="fullName"> </h1>
+            <h1 class="m-0" >User Profile </h1>
           </div><!-- /.col -->
           
         </div><!-- /.row -->
@@ -183,12 +283,46 @@
           <div class="row">
             <!-- /.col -->
 
+            <div class="col-md-3">
+  
+              <!-- Profile Image -->
+              <div class="card card-primary card-outline">
+                <div class="card-body box-profile">
+                  <div class="text-center">
+                    <img class="profile-user-img img-fluid img-circle"
+                         src="../dist/img/studentImage.svg"
+                         alt="User profile picture">
+                  </div>
+  
+                  <h3 class="profile-username text-center" id="fullName"> </h3>
+                  <br>
+  
+                  <ul class="list-group list-group-unbordered mb-3">
+                    <li class="list-group-item">
+                      <b >Phone</b> <a class="float-right" id="phone">1,322</a>
+                    </li>
+
+                    <li class="list-group-item">
+                        <b >Email</b> <a class="float-right" id="email">ww@</a>
+                      </li>
+                    
+                  </ul>
+  
+                  
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+  
+              
+            </div>
+
             <div class="col-md-9">
               <div class="card">
                 <div class="card-header p-2">
                   <ul class="nav nav-pills">
-                    <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">General Info</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Update</a></li>
+                    <li class="nav-item"><a class="nav-link active" id="navActivity" href="#activity" data-toggle="tab">General Info</a></li>
+                    <li class="nav-item"><a class="nav-link" id="navSettings" href="#settings" data-toggle="tab">Update</a></li>
                   </ul>
                 </div><!-- /.card-header -->
                 <div class="card-body">
@@ -199,18 +333,6 @@
                         <strong><i class="fas fa-book mr-1"></i> Full Name</strong>
                         <p class="text-muted" id="fullName2">
                         
-                        </p>
-                        <hr>
-
-                        <strong><i class="fas fa-book mr-1"></i> Email</strong>
-                        <p class="text-muted" id="email">
-                            
-                        </p>
-                        <hr>
-
-                        <strong><i class="fas fa-book mr-1"></i> Phone</strong>
-                        <p class="text-muted" id="phone">
-                             
                         </p>
                         <hr>
 
@@ -236,10 +358,7 @@
                     </div>
 
                     <!-- /.tab-pane -->
-                    <div class="tab-pane" id="inbox">
-                      <!--TODO INBOX-->
-                    </div>
-                    <!-- /.tab-pane -->
+                    
   
                     <div class="tab-pane" id="settings">
 
@@ -318,41 +437,6 @@
               <!-- /.card -->
             </div>
 
-            <div class="col-md-3">
-  
-              <!-- Profile Image -->
-              <div class="card card-primary card-outline">
-                <div class="card-body box-profile">
-                  <div class="text-center">
-                    <img class="profile-user-img img-fluid img-circle"
-                         src="../dist/img/studentImage.svg"
-                         alt="User profile picture">
-                  </div>
-  
-                  <h3 class="profile-username text-center"> Students</h3>
-  
-                  <p class="text-muted text-center" id="classe"></p>
-  
-                  <ul class="list-group list-group-unbordered mb-3">
-                    <li class="list-group-item">
-                      <b >Phone</b> <a class="float-right" id="phone">1,322</a>
-                    </li>
-
-                    <li class="list-group-item">
-                        <b >Email</b> <a class="float-right" id="email">ww@</a>
-                      </li>
-                    
-                  </ul>
-  
-                  
-                </div>
-                <!-- /.card-body -->
-              </div>
-              <!-- /.card -->
-  
-              
-            </div>
-
             <!-- /.col -->
           </div>
           <!-- /.row -->
@@ -421,7 +505,6 @@
   var url_string = window.location.href; 
   var url = new URL(url_string); 
   var c = url.searchParams.get("id"); 
-  console.log(c);
 
   // Post a user
   var url3 = "http://127.0.0.1:3000/users/" + c;
@@ -490,6 +573,19 @@
 
   xhr3.send(null);
 </script>
+
+<script>
+
+  var i = url.searchParams.get("i");  
+  if(i=="update"){
+    document.getElementById("activity").classList.remove("active");
+    document.getElementById("settings").classList.add("active");
+  
+    document.getElementById("navActivity").classList.remove("active");
+    document.getElementById("navSettings").classList.add("active");
+  
+  }
+  </script>
 
 <!--User Update-->
 

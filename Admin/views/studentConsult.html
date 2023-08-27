@@ -51,7 +51,7 @@
         <a href="../index.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="navBar.html" class="nav-link">Contact</a>
+        <a href="mailBox.html" class="nav-link">Inbox</a>
       </li>
     </ul>
   </nav>
@@ -62,7 +62,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <br>
     <!-- Brand Logo -->
-    <a href="../index3.html" class="brand-link">
+    <a href="#" class="brand-link">
       <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Admin</span>
     </a>
@@ -76,7 +76,7 @@
           <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="profile.html" class="d-block" id="userName"></a>
         </div>
       </div>
 
@@ -128,6 +128,31 @@
           <br>
 
           <li class="nav-item">
+            <a href="#" class="nav-link ">
+              <i class="fas fa-school"></i>
+              <p>
+                Classes
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="addClasse.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ADD</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="listClasse.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <br>
+
+          <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="fas fa-calendar-alt"></i>
               <p>
@@ -150,6 +175,81 @@
               </li>
             </ul>
           </li>
+
+
+          <br>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-calendar-alt"></i>
+              <p>
+                Events
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="addEvent.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ADD</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="events.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Event</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <br>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-user-cog"></i>
+              <p>
+                Users
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="addUser.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ADD</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="listUser.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <br>
+          <li class="nav-item">
+            <a href="demande.html" class="nav-link">
+              <i class="fas fa-file"></i>
+              <p>
+                Paper Request 
+              </p>
+            </a>
+          </li>
+
+          <br>
+          <li class="nav-item">
+            <a href="" onclick="logout();" class="nav-link">
+              <i class="fas fa-sign-out-alt"></i>
+              <p>
+                Log Out
+                
+              </p>
+            </a>
+            
+          </li>
+
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -438,7 +538,6 @@
    
 </script>
 
-
 <!--Get Classe-->
 <script>
   // Définir une requête de connection standard JS
@@ -476,9 +575,9 @@
 
 <!--Student Info-->
 <script>
-  var url_string = window.location.href; // ="file:///C:/Users/jabeu/OneDrive/Desktop/PFEHoussem2023/FrontEnd/Admin/viewUser.html?id=64ca2b07baa5565b2caa4735"
-  var url = new URL(url_string); // =file:///C:/Users/jabeu/OneDrive/Desktop/PFEHoussem2023/FrontEnd/Admin/viewUser.html?id=64ca2b07baa5565b2caa4735
-  var c = url.searchParams.get("id"); // =64ca2b07baa5565b2caa4735
+  var url_string = window.location.href;
+  var url = new URL(url_string); 
+  var c = url.searchParams.get("id"); 
   console.log(c);
 
   // Post a user
@@ -502,7 +601,7 @@
         $.getJSON(
         "http://127.0.0.1:3000/classes/" + response.idClasse,
         function (classe) {
-          document.getElementById("classe").innerHTML = classe.nom; // Afficher le nom du client dans la deuxième cellule
+          document.getElementById("classe").innerHTML = `<a href="classeConsult.html?id=`+classe._id+`">${classe.nom}</a>`;
         }
       );
 
@@ -588,6 +687,19 @@
   };
 
   xhr3.send(null);
+</script>
+
+<script>
+
+var i = url.searchParams.get("i");  
+if(i=="update"){
+  document.getElementById("activity").classList.remove("active");
+  document.getElementById("settings").classList.add("active");
+
+  document.getElementById("navActivity").classList.remove("active");
+  document.getElementById("navSettings").classList.add("active");
+
+}
 </script>
 
 <!--Student Update-->
@@ -725,6 +837,8 @@ function update(){
       data.prenom = document.getElementById("inputPrenom").value;
       data.email = document.getElementById("inputEmail").value;
       data.phone = document.getElementById("inputTel").value;
+
+      data.numInscription = document.getElementById("numInscription").textContent;
 
       data.idClasse = document.getElementById("inputClasse").value;
 

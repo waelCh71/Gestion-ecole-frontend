@@ -53,7 +53,7 @@
         <a href="../index.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="navBar.html" class="nav-link">Contact</a>
+        <a href="mailBox.html" class="nav-link">Inbox</a>
       </li>
     </ul>
   </nav>
@@ -64,7 +64,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <br>
     <!-- Brand Logo -->
-    <a href="../index3.html" class="brand-link">
+    <a href="#" class="brand-link">
       <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Admin</span>
     </a>
@@ -78,7 +78,7 @@
           <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="profile.html" class="d-block" id="userName"></a>
         </div>
       </div>
 
@@ -105,7 +105,7 @@
           <br>
       
           <li class="nav-item">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link ">
               <i class="fas fa-user-graduate"></i>
               <p>
                 Students
@@ -121,6 +121,31 @@
               </li>
               <li class="nav-item">
                 <a href="listStudent.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <br>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link ">
+              <i class="fas fa-school"></i>
+              <p>
+                Classes
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="addClasse.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ADD</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="listClasse.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>List</p>
                 </a>
@@ -152,6 +177,81 @@
               </li>
             </ul>
           </li>
+
+
+          <br>
+          <li class="nav-item">
+            <a href="#" class="nav-link active">
+              <i class="fas fa-calendar-alt"></i>
+              <p>
+                Events
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="addEvent.html" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ADD</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="events.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Event</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <br>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-user-cog"></i>
+              <p>
+                Users
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="addUser.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ADD</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="listUser.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <br>
+          <li class="nav-item">
+            <a href="demande.html" class="nav-link">
+              <i class="fas fa-file"></i>
+              <p>
+                Paper Request 
+              </p>
+            </a>
+          </li>
+
+          <br>
+          <li class="nav-item">
+            <a href="" onclick="logout();" class="nav-link">
+              <i class="fas fa-sign-out-alt"></i>
+              <p>
+                Log Out
+                
+              </p>
+            </a>
+            
+          </li>
+
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
