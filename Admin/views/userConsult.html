@@ -515,7 +515,7 @@
     var c = url.searchParams.get("id");
 
     // Post a user
-    var url3 = "http://127.0.0.1:3000/users/" + c;
+    var url3 = "https://gestion-ecole-backend.onrender.com/users/" + c;
     var xhr3 = new XMLHttpRequest();
     xhr3.open("GET", url3, true);
 
@@ -728,7 +728,7 @@
       console.log(c);
 
       // update a user 
-      var url3 = "http://127.0.0.1:3000/users/" + c;
+      var url3 = "https://gestion-ecole-backend.onrender.com/users/" + c;
       var data = {};
 
       data.nom = document.getElementById("inputName").value;

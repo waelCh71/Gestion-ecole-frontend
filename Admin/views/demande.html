@@ -426,7 +426,7 @@
     // Définir une requête de connection standard JS
     var request = new XMLHttpRequest();
     // Choisir la méthode GET comme une méthode d'accès au serveur et récupérer les données .
-    request.open("GET", "http://127.0.0.1:3000/demandes", true);
+    request.open("GET", "https://gestion-ecole-backend.onrender.com/demandes", true);
     // Load les données à partir de la serveur -> Début connection
     request.onload = function () {
       // Begin accessing JSON data here
@@ -513,7 +513,7 @@
      // Create a request variable and assign a new XMLHttpRequest object to it.
      var request = new XMLHttpRequest();
 // Open a new connection, using the GET request on the URL endpoint
-request.open("GET", "http://127.0.0.1:3000/demandes", true);
+request.open("GET", "https://gestion-ecole-backend.onrender.com/demandes", true);
 request.onload = function () {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response);

@@ -6,6 +6,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +15,8 @@
   <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
 
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
@@ -34,329 +36,331 @@
   <!-- summernote -->
   <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css">
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+  <div class="wrapper">
 
-  <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="../dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-  </div>
+    <!-- Preloader -->
+    <div class="preloader flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src="../dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    </div>
 
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="../index.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="mailBox.html" class="nav-link">Inbox</a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
-
-
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <br>
-    <!-- Brand Logo -->
-    <a href="#" class="brand-link">
-      <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Admin</span>
-    </a>
-    <br>
-    <!--TODO 1-->
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="profile.html" class="d-block" id="userName"></a>
-        </div>
-      </div>
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="../index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="mailBox.html" class="nav-link">Inbox</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
 
 
-      <!-- SidebarSearch Form -->
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <br>
+      <!-- Brand Logo -->
+      <a href="#" class="brand-link">
+        <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+          style="opacity: .8">
+        <span class="brand-text font-weight-light">Admin</span>
+      </a>
+      <br>
+      <!--TODO 1-->
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="profile.html" class="d-block" id="userName"></a>
+          </div>
+        </div>
 
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
+
+        <!-- SidebarSearch Form -->
+        <br>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
-          <li class="nav-item menu-open">
-            <a href="../index.html" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-              </p>
-            </a>
-            
-          </li>
+            <li class="nav-item menu-open">
+              <a href="../index.html" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+                </p>
+              </a>
 
-          <br>
-      
-          <li class="nav-item">
-            <a href="#" class="nav-link ">
-              <i class="fas fa-user-graduate"></i>
-              <p>
-                Students
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="addStudent.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ADD</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="listStudent.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <br>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link ">
-              <i class="fas fa-school"></i>
-              <p>
-                Classes
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="addClasse.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ADD</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="listClasse.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <br>
+            <br>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-calendar-alt"></i>
-              <p>
-                Schedule
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="addSchedule.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ADD</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="listSchedule.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link ">
+                <i class="fas fa-user-graduate"></i>
+                <p>
+                  Students
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addStudent.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="listStudent.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <br>
 
+            <li class="nav-item">
+              <a href="#" class="nav-link ">
+                <i class="fas fa-school"></i>
+                <p>
+                  Classes
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addClasse.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="listClasse.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <br>
 
-          <br>
-          <li class="nav-item">
-            <a href="#" class="nav-link active">
-              <i class="fas fa-calendar-alt"></i>
-              <p>
-                Events
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="addEvent.html" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ADD</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="events.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Event</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <br>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-user-cog"></i>
-              <p>
-                Users
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="addUser.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ADD</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="listUser.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <br>
-          <li class="nav-item">
-            <a href="demande.html" class="nav-link">
-              <i class="fas fa-file"></i>
-              <p>
-                Paper Request 
-              </p>
-            </a>
-          </li>
-
-          <br>
-          <li class="nav-item">
-            <a href="" onclick="logout();" class="nav-link">
-              <i class="fas fa-sign-out-alt"></i>
-              <p>
-                Log Out
-                
-              </p>
-            </a>
-            
-          </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-calendar-alt"></i>
+                <p>
+                  Schedule
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addSchedule.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="listSchedule.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
 
 
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
+            <br>
+            <li class="nav-item">
+              <a href="#" class="nav-link active">
+                <i class="fas fa-calendar-alt"></i>
+                <p>
+                  Events
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addEvent.html" class="nav-link active">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="events.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Event</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <br>
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">ADD Event</h1>
-          </div><!-- /.col -->
-          
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-    <br>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-user-cog"></i>
+                <p>
+                  Users
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addUser.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="listUser.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
 
-    <!--TODO 2-->
-    <!-- Main content -->
-  
-    <div class="card card-warning">
-        
-        
+            <br>
+            <li class="nav-item">
+              <a href="demande.html" class="nav-link">
+                <i class="fas fa-file"></i>
+                <p>
+                  Paper Request
+                </p>
+              </a>
+            </li>
+
+            <br>
+            <li class="nav-item">
+              <a href="" onclick="logout();" class="nav-link">
+                <i class="fas fa-sign-out-alt"></i>
+                <p>
+                  Log Out
+
+                </p>
+              </a>
+
+            </li>
+
+
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0">ADD Event</h1>
+            </div><!-- /.col -->
+
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+      <br>
+
+      <!--TODO 2-->
+      <!-- Main content -->
+
+      <div class="card card-warning">
+
+
         <div class="card-body">
-          <form onsubmit="return false" id="eventForm"> 
+          <form onsubmit="return false" id="eventForm">
             <div class="row">
 
               <div class="col-sm-6">
                 <!-- text input -->
                 <div class="form-group">
                   <label>Nom</label>
-                  <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Enter ..." >
+                  <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Enter ...">
                 </div>
               </div>
 
-              
+
               <div class="col-sm-6">
                 <div class="form-group">
                   <label>Tel</label>
-                  <input type="number" class="form-control" name="inputTel" id="inputTel"  placeholder="Enter ..." >
+                  <input type="number" class="form-control" name="inputTel" id="inputTel" placeholder="Enter ...">
                 </div>
               </div>
             </div>
 
-              <div class="row">
-                <div class="col-sm-6">
-                  <!-- textarea -->
-                  <div class="form-group">
-                    <label>Description</label>
-                    <textarea class="form-control" rows="3" name="inputDescription" id="inputDescription"
-                     placeholder="Enter ..." ></textarea>
-                  </div>
-                </div>
-
-                <div class="col-sm-6">
-                    <div class="form-group">
-                      <label>Date</label>
-                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                            <input type="date" class="form-control" name="inputDate" id="inputDate"/>
-                            
-                            </div>
-                        </div>
-                    </div>
-              </div>
-              <br>
-              <div class="row">
-                <div class="col-sm-3">
-                 
-                  <div class="form-group">
-                    <label>Media</label>
-                      
-                      <span class="btn btn-success col" onclick="uploadFile();">
-                        
-                        <i class="fas fa-plus"></i>
-                        <span>Upload Media</span>
-                        <input  type="hidden" id="i" name="i"/>
-                      </span>
-                      
-                  </div>
-                </div>
-
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <br>
-                    <span ><img id="image" src="../dist/img/noImage.png"  width="80px" height="80px"/></span>
-                  </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <!-- textarea -->
+                <div class="form-group">
+                  <label>Description</label>
+                  <textarea class="form-control" rows="3" name="inputDescription" id="inputDescription"
+                    placeholder="Enter ..."></textarea>
                 </div>
               </div>
 
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label>Date</label>
+                  <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                    <input type="date" class="form-control" name="inputDate" id="inputDate" />
 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-sm-3">
+
+                <div class="form-group">
+                  <label>Media</label>
+
+                  <span class="btn btn-success col" onclick="uploadFile();">
+
+                    <i class="fas fa-plus"></i>
+                    <span>Upload Media</span>
+                    <input type="hidden" id="i" name="i" />
+                  </span>
+
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <br>
+                  <span><img id="image" src="../dist/img/noImage.png" width="80px" height="80px" /></span>
+                </div>
+              </div>
             </div>
 
-            <div class="card-footer">
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-          </form>
+
         </div>
-        <!-- /.card-body -->
+
+        <div class="card-footer">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        </form>
       </div>
+      <!-- /.card-body -->
+    </div>
 
     <!-- /.content -->
   </div>
@@ -376,62 +380,62 @@
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
+  </div>
+  <!-- ./wrapper -->
 
-<!-- jQuery -->
-<script src="../plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
-<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="../plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="../plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="../plugins/moment/moment.min.js"></script>
-<script src="../plugins/daterangepicker/daterangepicker.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
-<script src="../plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../dist/js/demo.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="../dist/js/pages/dashboard.js"></script>
+  <!-- jQuery -->
+  <script src="../plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="../plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="../plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="../plugins/moment/moment.min.js"></script>
+  <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="../plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../dist/js/adminlte.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../dist/js/demo.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="../dist/js/pages/dashboard.js"></script>
 
-<!-- dropzonejs -->
-<script src="../plugins/dropzone/min/dropzone.min.js"></script>
+  <!-- dropzonejs -->
+  <script src="../plugins/dropzone/min/dropzone.min.js"></script>
 
-<script>
+  <script>
     // BS-Stepper Init
     document.addEventListener('DOMContentLoaded', function () {
       window.stepper = new Stepper(document.querySelector('.bs-stepper'))
     })
-  
+
     // DropzoneJS Demo Code Start
     Dropzone.autoDiscover = false
-  
+
     // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
     var previewNode = document.querySelector("#template")
     previewNode.id = ""
     var previewTemplate = previewNode.parentNode.innerHTML
     previewNode.parentNode.removeChild(previewNode)
-  
+
     var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
       url: "/target-url", // Set the url
       thumbnailWidth: 80,
@@ -442,148 +446,148 @@
       previewsContainer: "#previews", // Define the container to display the previews
       clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
     })
-  
-    myDropzone.on("addedfile", function(file) {
+
+    myDropzone.on("addedfile", function (file) {
       // Hookup the start button
-      file.previewElement.querySelector(".start").onclick = function() { myDropzone.enqueueFile(file) }
+      file.previewElement.querySelector(".start").onclick = function () { myDropzone.enqueueFile(file) }
     })
-  
+
     // Update the total progress bar
-    myDropzone.on("totaluploadprogress", function(progress) {
+    myDropzone.on("totaluploadprogress", function (progress) {
       document.querySelector("#total-progress .progress-bar").style.width = progress + "%"
     })
-  
-    myDropzone.on("sending", function(file) {
+
+    myDropzone.on("sending", function (file) {
       // Show the total progress bar when upload starts
       document.querySelector("#total-progress").style.opacity = "1"
       // And disable the start button
       file.previewElement.querySelector(".start").setAttribute("disabled", "disabled")
     })
-  
+
     // Hide the total progress bar when nothing's uploading anymore
-    myDropzone.on("queuecomplete", function(progress) {
+    myDropzone.on("queuecomplete", function (progress) {
       document.querySelector("#total-progress").style.opacity = "0"
     })
-  
+
     // Setup the buttons for all transfers
     // The "add files" button doesn't need to be setup because the config
     // `clickable` has already been specified.
-    document.querySelector("#actions .start").onclick = function() {
+    document.querySelector("#actions .start").onclick = function () {
       myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED))
     }
-    document.querySelector("#actions .cancel").onclick = function() {
+    document.querySelector("#actions .cancel").onclick = function () {
       myDropzone.removeAllFiles(true)
     }
     // DropzoneJS Demo Code End
   </script>
 
   <!-- jquery-validation -->
-<script src="../plugins/jquery-validation/jquery.validate.min.js"></script>
-<script src="../plugins/jquery-validation/additional-methods.min.js"></script>
+  <script src="../plugins/jquery-validation/jquery.validate.min.js"></script>
+  <script src="../plugins/jquery-validation/additional-methods.min.js"></script>
 
-<script>
+  <script>
 
-$(function () {
+    $(function () {
 
-  $.validator.setDefaults({
-    submitHandler: function () {
-      //alert( "Form successful submitted!" );
-      ajouter();
-    }
-  });
-  
-  $('#eventForm').validate({
-    rules: {
+      $.validator.setDefaults({
+        submitHandler: function () {
+          //alert( "Form successful submitted!" );
+          ajouter();
+        }
+      });
 
-      inputName: {
-        required: true,
-        minlength: 3,
-        maxlength: 25
-      },
+      $('#eventForm').validate({
+        rules: {
 
-      inputTel: {
-        required: true,
-        maxlength: 8,
-        minlength: 8
-      },
-
-      inputDate: {
-        required: true,
-      },
-
-    },
-
-    messages: {
-
-      inputName: {
-        required: "Please enter an Event Name",
-        minlength: "Event name must be at least 3 characters long",
-        maxlength: "Please enter a valid name"
-      },
-
-      inputTel: {
-        required: "Please enter a phone",
-        minlength: "Please enter a valid phone number",
-        maxlength: "Please enter a valid phone number"
-      },
-
-      inputDate: {
-        required: "Please enter the event Date",
-      },
-
-    },
-    errorElement: 'span',
-    errorPlacement: function (error, element) {
-      error.addClass('invalid-feedback');
-      element.closest('.form-group').append(error);
-    },
-    highlight: function (element, errorClass, validClass) {
-      $(element).addClass('is-invalid');
-    },
-    unhighlight: function (element, errorClass, validClass) {
-      $(element).removeClass('is-invalid');
-    }
-  });
-});
-
-
-function uploadFile() {
-        var i = document.getElementById("i");
-
-        const apikey = "ABFntY0smQ8O3Xu95pBQhz";
-        const client = filestack.init(apikey);
-        const options = {
-          maxFiles: 20,
-          uploadInBackground: false,
-          onOpen: () => console.log("opened!"),
-          onUploadDone: (res) => {
-            i.value = res.filesUploaded[0].url;
-                document.getElementById("image").src=res.filesUploaded[0].url;
-                
+          inputName: {
+            required: true,
+            minlength: 3,
+            maxlength: 25
           },
-        };
-        client.picker(options).open();
-      }
+
+          inputTel: {
+            required: true,
+            maxlength: 8,
+            minlength: 8
+          },
+
+          inputDate: {
+            required: true,
+          },
+
+        },
+
+        messages: {
+
+          inputName: {
+            required: "Please enter an Event Name",
+            minlength: "Event name must be at least 3 characters long",
+            maxlength: "Please enter a valid name"
+          },
+
+          inputTel: {
+            required: "Please enter a phone",
+            minlength: "Please enter a valid phone number",
+            maxlength: "Please enter a valid phone number"
+          },
+
+          inputDate: {
+            required: "Please enter the event Date",
+          },
+
+        },
+        errorElement: 'span',
+        errorPlacement: function (error, element) {
+          error.addClass('invalid-feedback');
+          element.closest('.form-group').append(error);
+        },
+        highlight: function (element, errorClass, validClass) {
+          $(element).addClass('is-invalid');
+        },
+        unhighlight: function (element, errorClass, validClass) {
+          $(element).removeClass('is-invalid');
+        }
+      });
+    });
+
+
+    function uploadFile() {
+      var i = document.getElementById("i");
+
+      const apikey = "ABFntY0smQ8O3Xu95pBQhz";
+      const client = filestack.init(apikey);
+      const options = {
+        maxFiles: 20,
+        uploadInBackground: false,
+        onOpen: () => console.log("opened!"),
+        onUploadDone: (res) => {
+          i.value = res.filesUploaded[0].url;
+          document.getElementById("image").src = res.filesUploaded[0].url;
+
+        },
+      };
+      client.picker(options).open();
+    }
 
     function ajouter() {
-      var url = "http://127.0.0.1:3000/events"; // Définir la collection à manipuler
+      var url = "https://gestion-ecole-backend.onrender.com/events"; // Définir la collection à manipuler
       // Récupère les données saisies dans la variable data.
 
       var data = {};
-      
-      data.nom = document.getElementById("inputName").value; 
+
+      data.nom = document.getElementById("inputName").value;
       data.phone = document.getElementById("inputTel").value;
       data.description = document.getElementById("inputDescription").value;
       data.dateEvenement = document.getElementById("inputDate").value;
       data.mediaLink = document.getElementById("i").value;
-      
+
 
 
 
       var json = JSON.stringify(data); // Convertir la variable de données en JSON.
-      var xhr = new XMLHttpRequest(); 
-      xhr.open("POST", url, true); 
-      xhr.setRequestHeader("Content-type", "application/json; charset=utf-8"); 
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", url, true);
+      xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
 
 
       // Load les données à partir de la serveur -> début connection
@@ -602,21 +606,22 @@ function uploadFile() {
     }
   </script>
 
-<script>
-  document.getElementById("userName").innerHTML= localStorage.getItem("usernameA");
-</script>
+  <script>
+    document.getElementById("userName").innerHTML = localStorage.getItem("usernameA");
+  </script>
 
-<!--LOgout-->
-<script>
-  function logout() {
-    var d = window.confirm("want to LogOut");
-    if (d == true) {
-      // localStorage.removeItem("idA");
-      localStorage.clear();
-      location.href = "signIn.html";
+  <!--LOgout-->
+  <script>
+    function logout() {
+      var d = window.confirm("want to LogOut");
+      if (d == true) {
+        // localStorage.removeItem("idA");
+        localStorage.clear();
+        location.href = "signIn.html";
+      }
     }
-  }
-</script>
+  </script>
 
 </body>
+
 </html>

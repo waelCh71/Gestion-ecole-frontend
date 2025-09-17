@@ -443,7 +443,7 @@
     var classeInfo;
 
     $.getJSON(
-      "http://127.0.0.1:3000/classes/" + c,
+      "https://gestion-ecole-backend.onrender.com/classes/" + c,
       function (classe) {
         classeInfo = classe;
         document.getElementById("classeTitle").innerHTML = classe.nom; // Afficher le nom du client dans la deuxième cellule
@@ -455,7 +455,7 @@
     // Définir une requête de connection standard JS
     var request = new XMLHttpRequest();
     // Choisir la méthode GET comme une méthode d'accès au serveur et récupérer les données .
-    request.open("GET", "http://127.0.0.1:3000/students", true);
+    request.open("GET", "https://gestion-ecole-backend.onrender.com/students", true);
     // Load les données à partir de la serveur -> Début connection
     request.onload = function () {
       // Begin accessing JSON data here
@@ -572,7 +572,7 @@
       //alert(document.getElementById("i"+idStudent));
       var semestre = document.getElementById("inputSemestre").value;
 
-      var url = "http://127.0.0.1:3000/notes";
+      var url = "https://gestion-ecole-backend.onrender.com/notes";
       var data = {};
 
       data.idStudent = idStudent;

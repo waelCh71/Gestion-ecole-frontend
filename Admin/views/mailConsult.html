@@ -445,7 +445,7 @@
     var c = url.searchParams.get("id");
 
 
-    var url3 = "http://127.0.0.1:3000/messages/" + c;
+    var url3 = "https://gestion-ecole-backend.onrender.com/messages/" + c;
     var xhr3 = new XMLHttpRequest();
     xhr3.open("GET", url3, true);
 
@@ -455,7 +455,7 @@
 
 
         $.getJSON(
-          "http://127.0.0.1:3000/users/" + response.idSender,
+          "https://gestion-ecole-backend.onrender.com/users/" + response.idSender,
           function (user) {
             document.getElementById("email").innerHTML =
               '<a href="mailTo:' + user.email + '">' + user.email + '</a>';

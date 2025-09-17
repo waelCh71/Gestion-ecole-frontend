@@ -451,7 +451,7 @@
     // Définir une requête de connection standard JS
     var request = new XMLHttpRequest();
     // Choisir la méthode GET comme une méthode d'accès au serveur et récupérer les données .
-    request.open("GET", "http://127.0.0.1:3000/classes", true);
+    request.open("GET", "https://gestion-ecole-backend.onrender.com/classes", true);
     // Load les données à partir de la serveur -> Début connection
     request.onload = function () {
       // Begin accessing JSON data here
@@ -494,7 +494,7 @@
 
 
     // Post a user
-    var url3 = "http://127.0.0.1:3000/emplois/" + c;
+    var url3 = "https://gestion-ecole-backend.onrender.com/emplois/" + c;
     var xhr3 = new XMLHttpRequest();
     xhr3.open("GET", url3, true);
 
@@ -587,7 +587,7 @@
     function update() {
 
       // update a user 
-      var url3 = "http://127.0.0.1:3000/emplois/" + c;
+      var url3 = "https://gestion-ecole-backend.onrender.com/emplois/" + c;
       var data = {};
 
       data.mediaLink = document.getElementById("i").value;

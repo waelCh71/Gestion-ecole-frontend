@@ -515,7 +515,7 @@
     });
 
     function ajouter() {
-      var url = "http://127.0.0.1:3000/students"; // Définir la collection à manipuler
+      var url = "https://gestion-ecole-backend.onrender.com/students"; // Définir la collection à manipuler
       // Récupère les données saisies dans la variable data.
 
       var data = {};
@@ -564,7 +564,7 @@
 
       let numeroInscription = '';
       /*$.getJSON(
-        "http://127.0.0.1:3000/classes/" + document.getElementById("studentClasse").value,
+        "https://gestion-ecole-backend.onrender.com/classes/" + document.getElementById("studentClasse").value,
         function (classe) {
           numeroInscription += classe._id.substring(); // Afficher le nom du client dans la deuxième cellule
         }
@@ -586,7 +586,7 @@
 
     var idClasse = ""
     // Choisir la méthode GET comme une méthode d'accès au serveur et récupérer les données .
-    request.open("GET", "http://127.0.0.1:3000/classes", true);
+    request.open("GET", "https://gestion-ecole-backend.onrender.com/classes", true);
     // Load les données à partir de la serveur -> Début connection
     request.onload = function () {
       // Begin accessing JSON data here

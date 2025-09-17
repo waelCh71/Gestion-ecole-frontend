@@ -442,7 +442,7 @@
     var c = url.searchParams.get("id");
 
     // Post a user
-    var url3 = "http://127.0.0.1:3000/demandes/" + c;
+    var url3 = "https://gestion-ecole-backend.onrender.com/demandes/" + c;
     var xhr3 = new XMLHttpRequest();
     xhr3.open("GET", url3, true);
 
@@ -460,7 +460,7 @@
         var parentFullName = "";
 
         $.getJSON(
-          "http://127.0.0.1:3000/users/" + response.idParent,
+          "https://gestion-ecole-backend.onrender.com/users/" + response.idParent,
           function (parent) {
 
             parentFullName = parent.nom + " " + parent.prenom;
@@ -468,7 +468,7 @@
         );
 
         $.getJSON(
-          "http://127.0.0.1:3000/students/" + response.idStudent,
+          "https://gestion-ecole-backend.onrender.com/students/" + response.idStudent,
           function (student) {
             document.getElementById("nom").innerHTML = "Nom: " + student.nom;
             document.getElementById("prenom").innerHTML = "Prenom: " + student.prenom;
@@ -498,7 +498,7 @@
                             <br><br>Fait à [Lieu], le ${date}.`;
             } if (response.type == "Relevée de Note") {
               $.getJSON(
-                "http://127.0.0.1:3000/notes/",
+                "https://gestion-ecole-backend.onrender.com/notes/",
                 function (data) {
                   data.forEach((i) => {
                     if (i.idStudent == response.idStudent) {
@@ -543,7 +543,7 @@
       //alert(dataReady);
       info = JSON.parse(dataReady);
 
-      var url3 = "http://127.0.0.1:3000/demandes/" + c;
+      var url3 = "https://gestion-ecole-backend.onrender.com/demandes/" + c;
       var data = {};
 
       data.idParent = info.idParent;
