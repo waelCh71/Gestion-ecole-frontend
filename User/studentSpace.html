@@ -307,7 +307,7 @@
 
     var request = new XMLHttpRequest();
 
-    request.open("GET", "http://127.0.0.1:3000/students", true);
+    request.open("GET", "https://gestion-ecole-backend.onrender.com/students", true);
 
     var listStudent = "";
 
@@ -351,7 +351,7 @@
           studentCard.insertAdjacentHTML("beforeend", ch);
 
           $.getJSON(
-            "http://127.0.0.1:3000/classes/" + i.idClasse,
+            "https://gestion-ecole-backend.onrender.com/classes/" + i.idClasse,
             function (classe) {
               document.getElementById(i._id).innerHTML = classe.nom;
 
@@ -366,7 +366,7 @@
    var spanElement = lastStaff.querySelector(".test span");
    
           $.getJSON(
-       "http://127.0.0.1:3000/classes/" + i.idClasse,
+       "https://gestion-ecole-backend.onrender.com/classes/" + i.idClasse,
        function (classe) {
          spanElement.textContent = classe.nom;
        
@@ -445,7 +445,7 @@
 
         data.idParent = localStorage.getItem("idUser");
 
-        var url3 = "http://127.0.0.1:3000/students/" + data._id;
+        var url3 = "https://gestion-ecole-backend.onrender.com/students/" + data._id;
 
 
         var json = JSON.stringify(data); // Convertir la variable de données en JSON.

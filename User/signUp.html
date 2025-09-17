@@ -264,7 +264,7 @@
   <script>
 
     function registreParent() {
-      var url = "http://127.0.0.1:3000/users";
+      var url = "https://gestion-ecole-backend.onrender.com/users";
 
       var data = {};
 
@@ -300,7 +300,7 @@
     }
 
     function registreStudent() {
-      var url = "http://127.0.0.1:3000/students";
+      var url = "https://gestion-ecole-backend.onrender.com/students";
       var email = document.getElementById("inputEmail").value;
       var numInscrit = document.getElementById("inputNumInscrit").value;
 
@@ -338,10 +338,10 @@
     function getStudentandSave(id) {
 
       $.getJSON(
-        "http://127.0.0.1:3000/students/" + id,
+        "https://gestion-ecole-backend.onrender.com/students/" + id,
         function (student) {
           // update a user 
-          var url3 = "http://127.0.0.1:3000/students/" + id;
+          var url3 = "https://gestion-ecole-backend.onrender.com/students/" + id;
           var data = {};
 
           data.nom = student.nom;

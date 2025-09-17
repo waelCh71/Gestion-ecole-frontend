@@ -299,7 +299,7 @@
 
 
     // Post a user
-    var url3 = "http://127.0.0.1:3000/events/" + c;
+    var url3 = "https://gestion-ecole-backend.onrender.com/events/" + c;
     var xhr3 = new XMLHttpRequest();
     xhr3.open("GET", url3, true);
 
@@ -338,7 +338,7 @@
   <script>
     // Définir une requête de connection standard JS
     var request = new XMLHttpRequest();
-    request.open("GET", "http://127.0.0.1:3000/events", true);
+    request.open("GET", "https://gestion-ecole-backend.onrender.com/events", true);
     // Load les données à partir de la serveur -> Début connection
     request.onload = function () {
       // Begin accessing JSON data here

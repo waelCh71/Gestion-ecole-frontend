@@ -360,7 +360,7 @@
 
 
 
-    var url3 = "http://127.0.0.1:3000/students/" + c;
+    var url3 = "https://gestion-ecole-backend.onrender.com/students/" + c;
     var xhr3 = new XMLHttpRequest();
     xhr3.open("GET", url3, true);
 
@@ -374,7 +374,7 @@
           response.nom + " " + response.prenom;
 
         $.getJSON(
-          "http://127.0.0.1:3000/classes/" + response.idClasse,
+          "https://gestion-ecole-backend.onrender.com/classes/" + response.idClasse,
           function (classe) {
             document.getElementById("classe").innerHTML = classe.nom;
 
@@ -415,7 +415,7 @@
       //alert(studentClasse);
       var request = new XMLHttpRequest();
 
-      request.open("GET", "http://127.0.0.1:3000/emplois", true);
+      request.open("GET", "https://gestion-ecole-backend.onrender.com/emplois", true);
 
       request.onload = function () {
         var data = JSON.parse(this.response);
@@ -435,7 +435,7 @@
   <!--Absence Info-->
   <script>
     var request = new XMLHttpRequest();
-    request.open("GET", "http://127.0.0.1:3000/absences", true);
+    request.open("GET", "https://gestion-ecole-backend.onrender.com/absences", true);
     // Load les données à partir de la serveur -> Début connection
     request.onload = function () {
 
@@ -476,7 +476,7 @@
     // Définir une requête de connection standard JS
     var request = new XMLHttpRequest();
     // Choisir la méthode GET comme une méthode d'accès au serveur et récupérer les données .
-    request.open("GET", "http://127.0.0.1:3000/notes", true);
+    request.open("GET", "https://gestion-ecole-backend.onrender.com/notes", true);
     // Load les données à partir de la serveur -> Début connection
     request.onload = function () {
       // Begin accessing JSON data here

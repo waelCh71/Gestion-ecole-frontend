@@ -414,7 +414,7 @@
     var c = localStorage.getItem("idUser");
     console.log(c);
 
-    var url3 = "http://127.0.0.1:3000/users/" + c;
+    var url3 = "https://gestion-ecole-backend.onrender.com/users/" + c;
     var xhr3 = new XMLHttpRequest();
     xhr3.open("GET", url3, true);
     var passwordVerif = "";
@@ -592,7 +592,7 @@
       //console.log("password verif2: "+passwordVerif);
 
       // update a user 
-      var url3 = "http://127.0.0.1:3000/users/" + c;
+      var url3 = "https://gestion-ecole-backend.onrender.com/users/" + c;
       var data = {};
 
       data.nom = document.getElementById("inputName").value;
@@ -709,7 +709,7 @@
 
 
       // update a user 
-      var url3 = "http://127.0.0.1:3000/users/" + c;
+      var url3 = "https://gestion-ecole-backend.onrender.com/users/" + c;
       var data = {};
 
       data.nom = document.getElementById("inputName").value;

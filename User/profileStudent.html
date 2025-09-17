@@ -371,7 +371,7 @@
 
     document.getElementById("consultButton").href = "studentConsult.html?id=" + c;
 
-    var url3 = "http://127.0.0.1:3000/students/" + c;
+    var url3 = "https://gestion-ecole-backend.onrender.com/students/" + c;
     var xhr3 = new XMLHttpRequest();
     xhr3.open("GET", url3, true);
 
@@ -387,7 +387,7 @@
 
 
         $.getJSON(
-          "http://127.0.0.1:3000/classes/" + response.idClasse,
+          "https://gestion-ecole-backend.onrender.com/classes/" + response.idClasse,
           function (classe) {
             document.getElementById("classe").innerHTML = classe.nom; // Afficher le nom du client dans la deuxième cellule
           }
@@ -499,7 +499,7 @@
     function update() {
 
       response2 = JSON.parse(responseToPassword);
-      var url3 = "http://127.0.0.1:3000/students/" + c;
+      var url3 = "https://gestion-ecole-backend.onrender.com/students/" + c;
       var data = {};
 
       data.nom = response2.nom;
