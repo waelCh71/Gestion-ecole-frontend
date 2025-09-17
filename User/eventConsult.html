@@ -7,8 +7,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from preview.colorlib.com/theme/kiddos/blog-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Aug 2023 17:45:10 GMT -->
-
 <head>
   <title>Kiddos </title>
   <meta charset="utf-8">
@@ -84,8 +82,8 @@
         <div class="col-md-9 ftco-animate text-center">
           <h1 class="mb-2 bread">Our Events</h1>
           <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
-                  class="ion-ios-arrow-forward"></i></a></span> <span><a href="event.html">Events 
-                    <i class="ion-ios-arrow-forward"></i></a></span></span> <span>Consult</span></p>
+                  class="ion-ios-arrow-forward"></i></a></span> <span><a href="event.html">Events
+                <i class="ion-ios-arrow-forward"></i></a></span></span> <span>Consult</span></p>
         </div>
       </div>
     </div>
@@ -96,11 +94,11 @@
       <div class="row">
 
         <div class="col-lg-8 ftco-animate">
-          
+
           <div class="row">
-            <h2 class="mb-3" id="nom" ></h2>
-            <h2 class="mb-3" >   <a class="mr-2" href="" id="phone"></a></h2>
-            
+            <h2 class="mb-3" id="nom"></h2>
+            <h2 class="mb-3"> <a class="mr-2" href="" id="phone"></a></h2>
+
           </div>
           <div class="justify-content-end"><a href="#" id="date"></a></div>
 
@@ -109,7 +107,7 @@
             <img src="" id="image" alt="" class="img-fluid">
           </p>
 
-          
+
         </div>
 
         <div class="col-lg-4 sidebar ftco-animate">
@@ -147,11 +145,13 @@
             <h2 class="ftco-heading-2">Have a Questions?</h2>
             <div class="block-23 mb-3">
               <ul>
-                <li><span class="icon icon-map-marker"></span><span class="text">Campus Universitaire Boukhzar, route de ceinture,
-                   Sousse</span></li>
-                <li><a href="tel:+"><span class="icon icon-phone"></span><span class="text">+77 23 727 122</span></a></li>
+                <li><span class="icon icon-map-marker"></span><span class="text">Campus Universitaire Boukhzar, route de
+                    ceinture,
+                    Sousse</span></li>
+                <li><a href="tel:+"><span class="icon icon-phone"></span><span class="text">+77 23 727 122</span></a>
+                </li>
                 <li><a href="mailTo:wael.ch.71@gmail.com"><span class="icon icon-envelope"></span>
-                  <span class="text">School@gmail.com</span></a></li>
+                    <span class="text">School@gmail.com</span></a></li>
 
                 </li>
               </ul>
@@ -166,8 +166,10 @@
             <ul class="list-unstyled">
               <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
               <li><a href="event.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Events</a></li>
-              <li><a href="requestPaper.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Request Paper</a></li>
-              <li><a href="#" onclick="goToProfile();"><span class="ion-ios-arrow-round-forward mr-2"></span>Profile</a></li>
+              <li><a href="requestPaper.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Request Paper</a>
+              </li>
+              <li><a href="#" onclick="goToProfile();"><span class="ion-ios-arrow-round-forward mr-2"></span>Profile</a>
+              </li>
               <li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact Us</a></li>
 
             </ul>
@@ -187,9 +189,12 @@
           <div class="ftco-footer-widget mb-5">
             <h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
             <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-              <li class="ftco-animate"><a href="https://www.twitter.com" target="_blank"><span class="icon-twitter"></span></a></li>
-              <li class="ftco-animate"><a href="https://www.facebook.com" target="_blank"><span class="icon-facebook"></span></a></li>
-              <li class="ftco-animate"><a href="https://www.instagram.com" target="_blank"><span class="icon-instagram"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.twitter.com" target="_blank"><span
+                    class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.facebook.com" target="_blank"><span
+                    class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.instagram.com" target="_blank"><span
+                    class="icon-instagram"></span></a></li>
             </ul>
           </div>
         </div>
@@ -246,107 +251,107 @@
     data-cf-beacon='{"rayId":"7f105efb19320e71","version":"2023.7.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}'
     crossorigin="anonymous"></script>
 
-    <script>
-      var navBar = document.getElementById('navBar');
-  
-      var newItem = document.createElement("li");
-      newItem.className = "nav-item";
-  
-  
-  
-      if (!localStorage.getItem("idUser") && !localStorage.getItem("idStudent")) {
-  
-        newItem.innerHTML = '<a href="signIn.html" class="nav-link"><button type="button" class="btn btn-primary">Log In</button></a>';
-      } else {
-  
-        newItem.innerHTML = '<a href="#" onclick="goToProfile();" title="Profile" class="nav-link nav-links"><div class="menu-user-image"><img src="images/profile.png" class="menu-user-img ml-1" alt=""> </div></a>';
-      }
-  
-      navBar.appendChild(newItem);
-  
-      var liElement = document.getElementById("requestPaper");
-  
-      var a = document.getElementById("studentSpace");
-      if (!localStorage.getItem("idUser")) {
-  
-        a.href = "studentConsult.html?id=" + localStorage.getItem("idStudent");
-        liElement.remove();
-      } else {
-        a.href = "studentSpace.html";
-  
-      }
-  
-  
-      function goToProfile() {
-        if (!localStorage.getItem("idUser")) {
-          location.replace("profileStudent.html");
-        } else {
-          location.replace("profileParent.html");
-        }
-      }
-    </script>
+  <script>
+    var navBar = document.getElementById('navBar');
 
-    <!--event Info-->
-<script>
-  var url_string = window.location.href; 
-  var url = new URL(url_string); 
-  var c = url.searchParams.get("id"); 
+    var newItem = document.createElement("li");
+    newItem.className = "nav-item";
 
 
-  // Post a user
-  var url3 = "http://127.0.0.1:3000/events/" + c;
-  var xhr3 = new XMLHttpRequest();
-  xhr3.open("GET", url3, true);
 
-  xhr3.onload = function () {
-    var response = JSON.parse(xhr3.responseText);
-    if (xhr3.readyState == 4 && xhr3.status == "200") {
-      console.table(response);
+    if (!localStorage.getItem("idUser") && !localStorage.getItem("idStudent")) {
 
-      //Student Info Consult
-      document.getElementById("nom").innerHTML =
-         response.nom ;
-
-
-      document.getElementById("description").innerHTML =
-         response.description;
-
-      document.getElementById("image").src =
-         response.mediaLink;
-
-         document.getElementById("date").innerHTML = 
-          `      <span class="icon-calendar"></span> `+response.dateEvenement;
-
-          document.getElementById("phone").innerHTML =
-            `<span class="icon-phone2"></span> `+response.phone;
-            document.getElementById("phone").href="tel:"+response.phone;
-
+      newItem.innerHTML = '<a href="signIn.html" class="nav-link"><button type="button" class="btn btn-primary">Log In</button></a>';
     } else {
-      console.log("error");
+
+      newItem.innerHTML = '<a href="#" onclick="goToProfile();" title="Profile" class="nav-link nav-links"><div class="menu-user-image"><img src="images/profile.png" class="menu-user-img ml-1" alt=""> </div></a>';
     }
-  };
 
-  xhr3.send(null);
-</script>
+    navBar.appendChild(newItem);
 
-<!--Events-->
-<script>
-  // Définir une requête de connection standard JS
-  var request = new XMLHttpRequest();
-  request.open("GET", "http://127.0.0.1:3000/events", true);
-  // Load les données à partir de la serveur -> Début connection
-  request.onload = function () {
-    // Begin accessing JSON data here
-    var data = JSON.parse(this.response);
+    var liElement = document.getElementById("requestPaper");
 
-    const eventContainer = document.getElementById('eventContainer');
+    var a = document.getElementById("studentSpace");
+    if (!localStorage.getItem("idUser")) {
 
-    var j=0;
-    var lengthData=data.length;
+      a.href = "studentConsult.html?id=" + localStorage.getItem("idStudent");
+      liElement.remove();
+    } else {
+      a.href = "studentSpace.html";
 
-    data.forEach((i) => {
+    }
 
-      ch = `
+
+    function goToProfile() {
+      if (!localStorage.getItem("idUser")) {
+        location.replace("profileStudent.html");
+      } else {
+        location.replace("profileParent.html");
+      }
+    }
+  </script>
+
+  <!--event Info-->
+  <script>
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var c = url.searchParams.get("id");
+
+
+    // Post a user
+    var url3 = "http://127.0.0.1:3000/events/" + c;
+    var xhr3 = new XMLHttpRequest();
+    xhr3.open("GET", url3, true);
+
+    xhr3.onload = function () {
+      var response = JSON.parse(xhr3.responseText);
+      if (xhr3.readyState == 4 && xhr3.status == "200") {
+        console.table(response);
+
+        //Student Info Consult
+        document.getElementById("nom").innerHTML =
+          response.nom;
+
+
+        document.getElementById("description").innerHTML =
+          response.description;
+
+        document.getElementById("image").src =
+          response.mediaLink;
+
+        document.getElementById("date").innerHTML =
+          `      <span class="icon-calendar"></span> ` + response.dateEvenement;
+
+        document.getElementById("phone").innerHTML =
+          `<span class="icon-phone2"></span> ` + response.phone;
+        document.getElementById("phone").href = "tel:" + response.phone;
+
+      } else {
+        console.log("error");
+      }
+    };
+
+    xhr3.send(null);
+  </script>
+
+  <!--Events-->
+  <script>
+    // Définir une requête de connection standard JS
+    var request = new XMLHttpRequest();
+    request.open("GET", "http://127.0.0.1:3000/events", true);
+    // Load les données à partir de la serveur -> Début connection
+    request.onload = function () {
+      // Begin accessing JSON data here
+      var data = JSON.parse(this.response);
+
+      const eventContainer = document.getElementById('eventContainer');
+
+      var j = 0;
+      var lengthData = data.length;
+
+      data.forEach((i) => {
+
+        ch = `
       <div class="block-21 mb-4 d-flex">
               <a class="blog-img mr-4" style="background-image: url(${i.mediaLink});"></a>
               <div class="text">
@@ -360,16 +365,16 @@
               </div>
             </div>
          ` ;
-         if(j>=lengthData-3){
-            eventContainer.insertAdjacentHTML("afterbegin", ch);
-           }
-           j+=1;
+        if (j >= lengthData - 3) {
+          eventContainer.insertAdjacentHTML("afterbegin", ch);
+        }
+        j += 1;
 
-    });
-  };
-  // Send request
-  request.send();
-</script>
+      });
+    };
+    // Send request
+    request.send();
+  </script>
 </body>
 
 </html>

@@ -1,331 +1,332 @@
 <script>
-    if (!localStorage.getItem("idA")) {
-        window.location = "signIn.html";
-    }
+  if (!localStorage.getItem("idA")) {
+    window.location = "signIn.html";
+  }
 </script>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Admin | Grades</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Admin | Grades</title>
 
-    <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+  <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
 
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
-    <!-- daterange picker -->
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- daterange picker -->
   <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- Tempusdominus Bootstrap 4 -->
-    <link rel="stylesheet" href="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-    <!-- iCheck -->
-    <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-    <!-- JQVMap -->
-    <link rel="stylesheet" href="../plugins/jqvmap/jqvmap.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
-    <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-    <!-- Daterange picker -->
-    <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
-    <!-- summernote -->
-    <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="../plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-    <div class="wrapper">
+  <div class="wrapper">
 
-        <!-- Preloader -->
-        <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="../dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-        </div>
+    <!-- Preloader -->
+    <div class="preloader flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src="../dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    </div>
 
-        <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="../index.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="mailBox.html" class="nav-link">Inbox</a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
-
-
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <br>
-    <!-- Brand Logo -->
-    <a href="#" class="brand-link">
-      <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Admin</span>
-    </a>
-    <br>
-    <!--TODO 1-->
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="profile.html" class="d-block" id="userName"></a>
-        </div>
-      </div>
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="../index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="mailBox.html" class="nav-link">Inbox</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
 
 
-      <!-- SidebarSearch Form -->
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <br>
+      <!-- Brand Logo -->
+      <a href="#" class="brand-link">
+        <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+          style="opacity: .8">
+        <span class="brand-text font-weight-light">Admin</span>
+      </a>
+      <br>
+      <!--TODO 1-->
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="profile.html" class="d-block" id="userName"></a>
+          </div>
+        </div>
 
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
+
+        <!-- SidebarSearch Form -->
+        <br>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
-          <li class="nav-item menu-open">
-            <a href="../index.html" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-              </p>
-            </a>
-            
-          </li>
+            <li class="nav-item menu-open">
+              <a href="../index.html" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+                </p>
+              </a>
 
-          <br>
-      
-          <li class="nav-item">
-            <a href="#" class="nav-link ">
-              <i class="fas fa-user-graduate"></i>
-              <p>
-                Students
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="addStudent.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ADD</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="listStudent.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <br>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link active">
-              <i class="fas fa-school"></i>
-              <p>
-                Classes
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="addClasse.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ADD</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="listClasse.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <br>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-calendar-alt"></i>
-              <p>
-                Schedule
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="addSchedule.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ADD</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="listSchedule.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-
-          <br>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-calendar-alt"></i>
-              <p>
-                Events
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="addEvent.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ADD</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="events.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Event</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <br>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-user-cog"></i>
-              <p>
-                Users
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="addUser.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ADD</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="listUser.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <br>
-          <li class="nav-item">
-            <a href="demande.html" class="nav-link">
-              <i class="fas fa-file"></i>
-              <p>
-                Paper Request 
-              </p>
-            </a>
-          </li>
-
-          <br>
-          <li class="nav-item">
-            <a href="" onclick="logout();" class="nav-link">
-              <i class="fas fa-sign-out-alt"></i>
-              <p>
-                Log Out
-                
-              </p>
-            </a>
-            
-          </li>
-
-
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
-
-
-
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <div class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1 class="m-0" id="classeTitle"></h1>
-                        </div><!-- /.col -->
-
-                    </div><!-- /.row -->
-                </div><!-- /.container-fluid -->
-            </div>
-            <!-- /.content-header -->
             <br>
 
-            <!--TODO 2-->
-            <!-- Main content -->
+            <li class="nav-item">
+              <a href="#" class="nav-link ">
+                <i class="fas fa-user-graduate"></i>
+                <p>
+                  Students
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addStudent.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="listStudent.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <br>
 
-            <!--Search Section-->
-            <section class="content">
-                <div class="container-fluid">
-                    <form id="absenceForm">
-                        <div class="row">
-                            <div class="col-md-10 offset-md-1">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <!-- Date and time -->
-                                        <div class="form-group">
-                                            <div class="select-wrap">
-                                                <label> Semestre</label>
-                                                <select name="inputSemestre" id="inputSemestre" class="form-control">
-                                                  <option value="" disabled selected>Select an option</option>
-                                                  <option >S1</option>
-                                                  <option >S2</option>
-                                                  <option >S3</option>
-                                                </select>
-                                              </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
+            <li class="nav-item">
+              <a href="#" class="nav-link active">
+                <i class="fas fa-school"></i>
+                <p>
+                  Classes
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addClasse.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="listClasse.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <br>
 
-                            </div>
-                        </div>
-                    </form>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-calendar-alt"></i>
+                <p>
+                  Schedule
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addSchedule.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="listSchedule.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
 
 
-                </div>
-            </section>
+            <br>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-calendar-alt"></i>
+                <p>
+                  Events
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addEvent.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="events.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Event</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <br>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-user-cog"></i>
+                <p>
+                  Users
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addUser.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="listUser.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <br>
+            <li class="nav-item">
+              <a href="demande.html" class="nav-link">
+                <i class="fas fa-file"></i>
+                <p>
+                  Paper Request
+                </p>
+              </a>
+            </li>
+
+            <br>
+            <li class="nav-item">
+              <a href="" onclick="logout();" class="nav-link">
+                <i class="fas fa-sign-out-alt"></i>
+                <p>
+                  Log Out
+
+                </p>
+              </a>
+
+            </li>
 
 
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0" id="classeTitle"></h1>
+            </div><!-- /.col -->
+
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+      <br>
+
+      <!--TODO 2-->
+      <!-- Main content -->
+
+      <!--Search Section-->
+      <section class="content">
+        <div class="container-fluid">
+          <form id="absenceForm">
             <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-header">
+              <div class="col-md-10 offset-md-1">
+                <div class="row">
+                  <div class="col-6">
+                    <!-- Date and time -->
+                    <div class="form-group">
+                      <div class="select-wrap">
+                        <label> Semestre</label>
+                        <select name="inputSemestre" id="inputSemestre" class="form-control">
+                          <option value="" disabled selected>Select an option</option>
+                          <option>S1</option>
+                          <option>S2</option>
+                          <option>S3</option>
+                        </select>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </form>
 
 
-                            <div class="card-tools">
-                                <!-- <div class="input-group input-group-sm" style="width: 150px;">
+        </div>
+      </section>
+
+
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+
+
+              <div class="card-tools">
+                <!-- <div class="input-group input-group-sm" style="width: 150px;">
                       <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
   
                       <div class="input-group-append">
@@ -334,154 +335,155 @@
                         </button>
                       </div>
                     </div>-->
-                            </div>
-                        </div>
-                        <!-- /.card-header -->
-                        <div class="card-body table-responsive p-0">
-                            <table class="table table-hover text-nowrap">
-                                <thead>
-                                    <tr>
-                                        <th>N°</th>
-                                        <th>NOM</th>
-                                        <th>PRENOM</th>
-                                        <th>EMAIL</th>
-                                        
-                                        <th>Grades</th>
-                                        
-                                        <th></th>
-
-                                    </tr>
-                                </thead>
-                                <tbody id="listStudent">
-                                   
-
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- /.card-body -->
-                    </div>
-                    <!-- /.card -->
-                </div>
+              </div>
             </div>
-            <!-- /.content -->
+            <!-- /.card-header -->
+            <div class="card-body table-responsive p-0">
+              <table class="table table-hover text-nowrap">
+                <thead>
+                  <tr>
+                    <th>N°</th>
+                    <th>NOM</th>
+                    <th>PRENOM</th>
+                    <th>EMAIL</th>
+
+                    <th>Grades</th>
+
+                    <th></th>
+
+                  </tr>
+                </thead>
+                <tbody id="listStudent">
+
+
+                </tbody>
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
         </div>
-
-
-        <!-- /.content-wrapper -->
-        <footer class="main-footer">
-            <strong>Copyright &copy; 2023 <a href="#"></a>Stage</strong>
-            All rights reserved.
-            <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 1.0
-            </div>
-        </footer>
-
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-        <!-- /.control-sidebar -->
+      </div>
+      <!-- /.content -->
     </div>
-    <!-- ./wrapper -->
-
-    <!-- jQuery -->
-    <script src="../plugins/jquery/jquery.min.js"></script>
-    <!-- jQuery UI 1.11.4 -->
-    <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
-    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-    <script>
-        $.widget.bridge('uibutton', $.ui.button)
-    </script>
-    <!-- Bootstrap 4 -->
-    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- ChartJS -->
-    <script src="../plugins/chart.js/Chart.min.js"></script>
-    <!-- Sparkline -->
-    <script src="../plugins/sparklines/sparkline.js"></script>
-    <!-- JQVMap -->
-    <script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-    <!-- jQuery Knob Chart -->
-    <script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
-    <!-- daterangepicker -->
-    <script src="../plugins/moment/moment.min.js"></script>
-    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
-    <!-- Tempusdominus Bootstrap 4 -->
-    <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-    <!-- Summernote -->
-    <script src="../plugins/summernote/summernote-bs4.min.js"></script>
-    <!-- overlayScrollbars -->
-    <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="../dist/js/adminlte.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="../dist/js/demo.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="../dist/js/pages/dashboard.js"></script>
-
-    <style>
-        .bord1 {
-          border-color: red;
-        }
-        .bord2 {
-          border-color: green;
-        }
-      </style>
-
-      <!-- jquery-validation -->
-<script src="../plugins/jquery-validation/jquery.validate.min.js"></script>
-<script src="../plugins/jquery-validation/additional-methods.min.js"></script>
-
-      <!--Students info-->
-    <script>
-
-        var url_string = window.location.href;
-        var url = new URL(url_string);
-        var c = url.searchParams.get("id");
-        var classeInfo;
-
-        $.getJSON(
-            "http://127.0.0.1:3000/classes/" + c,
-            function (classe) {
-                classeInfo = classe;
-                document.getElementById("classeTitle").innerHTML = classe.nom; // Afficher le nom du client dans la deuxième cellule
-            }
-        );
 
 
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+      <strong>Copyright &copy; 2023 <a href="#"></a>Stage</strong>
+      All rights reserved.
+      <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 1.0
+      </div>
+    </footer>
 
-        // Définir une requête de connection standard JS
-        var request = new XMLHttpRequest();
-        // Choisir la méthode GET comme une méthode d'accès au serveur et récupérer les données .
-        request.open("GET", "http://127.0.0.1:3000/students", true);
-        // Load les données à partir de la serveur -> Début connection
-        request.onload = function () {
-            // Begin accessing JSON data here
-            var data = JSON.parse(this.response);
-            var table = document.getElementById("listStudent");
-            console.log(data);
-            var j = 1;
-            //alert(classeInfo._id);
-            data.forEach((i) => {
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
 
-                if (i.idClasse == classeInfo._id) {
-                    // Insérer une ligne dans le tableau
-                    var row = table.insertRow(-1);
-                    // Insérer des cellules dans le tableau
-                    var cell1 = row.insertCell(0);
-                    var cell2 = row.insertCell(1);
-                    var cell3 = row.insertCell(2);
-                    var cell4 = row.insertCell(3);
-                    var cell5 = row.insertCell(4);
-                    var cell6 = row.insertCell(5);
-                    
-                    cell1.innerHTML = j;
-                    cell2.innerHTML = i.nom;
-                    cell3.innerHTML = `<a href="studentConsult.html?id=`+i._id+`">`+i.prenom+`</a>`;
-                    cell4.innerHTML = i.email;
-                    
+  <!-- jQuery -->
+  <script src="../plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="../plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="../plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="../plugins/moment/moment.min.js"></script>
+  <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="../plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../dist/js/adminlte.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../dist/js/demo.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="../dist/js/pages/dashboard.js"></script>
 
-                    cell5.innerHTML = `
+  <style>
+    .bord1 {
+      border-color: red;
+    }
+
+    .bord2 {
+      border-color: green;
+    }
+  </style>
+
+  <!-- jquery-validation -->
+  <script src="../plugins/jquery-validation/jquery.validate.min.js"></script>
+  <script src="../plugins/jquery-validation/additional-methods.min.js"></script>
+
+  <!--Students info-->
+  <script>
+
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var c = url.searchParams.get("id");
+    var classeInfo;
+
+    $.getJSON(
+      "http://127.0.0.1:3000/classes/" + c,
+      function (classe) {
+        classeInfo = classe;
+        document.getElementById("classeTitle").innerHTML = classe.nom; // Afficher le nom du client dans la deuxième cellule
+      }
+    );
+
+
+
+    // Définir une requête de connection standard JS
+    var request = new XMLHttpRequest();
+    // Choisir la méthode GET comme une méthode d'accès au serveur et récupérer les données .
+    request.open("GET", "http://127.0.0.1:3000/students", true);
+    // Load les données à partir de la serveur -> Début connection
+    request.onload = function () {
+      // Begin accessing JSON data here
+      var data = JSON.parse(this.response);
+      var table = document.getElementById("listStudent");
+      console.log(data);
+      var j = 1;
+      //alert(classeInfo._id);
+      data.forEach((i) => {
+
+        if (i.idClasse == classeInfo._id) {
+          // Insérer une ligne dans le tableau
+          var row = table.insertRow(-1);
+          // Insérer des cellules dans le tableau
+          var cell1 = row.insertCell(0);
+          var cell2 = row.insertCell(1);
+          var cell3 = row.insertCell(2);
+          var cell4 = row.insertCell(3);
+          var cell5 = row.insertCell(4);
+          var cell6 = row.insertCell(5);
+
+          cell1.innerHTML = j;
+          cell2.innerHTML = i.nom;
+          cell3.innerHTML = `<a href="studentConsult.html?id=` + i._id + `">` + i.prenom + `</a>`;
+          cell4.innerHTML = i.email;
+
+
+          cell5.innerHTML = `
                  
                     <div class="row" id="upload${i._id}">
                   <div class="form-group" >
@@ -489,102 +491,102 @@
                         
                         <i class="fas fa-plus"></i>
                         <span>Upload Media</span>
-                        <input  type="hidden" id="i`+i._id+`" name="i"/>
+                        <input  type="hidden" id="i`+ i._id + `" name="i"/>
                       </span>
                       
                   </div>
               </div>`;
 
-                    var fullName=i.nom+" "+i.prenom;
-                   
-                    cell6.innerHTML = `<div id="`+i._id+`">
-                    <button type="submit" disabled class="btn btn-primary btn-block" id="btn`+i._id+`" onclick="verif('${(i._id).toString()}','${fullName}');">Confirm</button>
+          var fullName = i.nom + " " + i.prenom;
+
+          cell6.innerHTML = `<div id="` + i._id + `">
+                    <button type="submit" disabled class="btn btn-primary btn-block" id="btn`+ i._id + `" onclick="verif('${(i._id).toString()}','${fullName}');">Confirm</button>
                     </div>`;
 
-                    j = j + 1;
-                }
-            });
-        };
-        // Send request
-        request.send();
-    </script>
+          j = j + 1;
+        }
+      });
+    };
+    // Send request
+    request.send();
+  </script>
 
-    <!--Upload + add grades-->
-    <script>
+  <!--Upload + add grades-->
+  <script>
 
-function uploadFile(id) {
-        //var i = document.getElementById("i"+id);
-        //alert(id);
-        
-        const apikey = "ABFntY0smQ8O3Xu95pBQhz";
-        const client = filestack.init(apikey);
-        const options = {
-          maxFiles: 1,
-          uploadInBackground: false,
-          onOpen: () => console.log("opened!"),
-          onUploadDone: (res) => {
-            
-            //i.value = res.filesUploaded[0].url;
+    function uploadFile(id) {
+      //var i = document.getElementById("i"+id);
+      //alert(id);
 
-                document.getElementById("upload"+id).innerHTML=`
+      const apikey = "ABFntY0smQ8O3Xu95pBQhz";
+      const client = filestack.init(apikey);
+      const options = {
+        maxFiles: 1,
+        uploadInBackground: false,
+        onOpen: () => console.log("opened!"),
+        onUploadDone: (res) => {
+
+          //i.value = res.filesUploaded[0].url;
+
+          document.getElementById("upload" + id).innerHTML = `
                 <div class="form-group">
                     <span ><img id="image" src="../dist/img/pdfImage.jpg"  width="40px" height="40px"/></span>
                     <span class="float-right btn-tool"><a href="" onclick="deleteFile('${id}')"><i class="fas fa-times"></i></a></span>
-                    <input  type="hidden" id="i`+id+`" value="`+res.filesUploaded[0].url+`" name="i"/>
+                    <input  type="hidden" id="i`+ id + `" value="` + res.filesUploaded[0].url + `" name="i"/>
                     </div>`;
-                //alert(document.getElementById("upload"+id).innerHTML);
-                document.getElementById("btn"+id).disabled=false;
-          },
-        };
-        client.picker(options).open();
+          //alert(document.getElementById("upload"+id).innerHTML);
+          document.getElementById("btn" + id).disabled = false;
+        },
+      };
+      client.picker(options).open();
+    }
+
+    function verif(idStudent, fullName) {
+
+      var j = 0;
+      var inputSemestre = document.getElementById("inputSemestre").value;
+
+
+      if (!inputSemestre) {
+        j++;
+        document.getElementById("inputSemestre").classList.remove("bord2");
+        document.getElementById("inputSemestre").classList.add("bord1");
+      } else {
+        document.getElementById("inputSemestre").classList.remove("bord1");
+        document.getElementById("inputSemestre").classList.add("bord2");
       }
 
-    function verif(idStudent,fullName) {
-        
-        var j = 0;
-        var inputSemestre = document.getElementById("inputSemestre").value; 
-        
+      if (j == 0) {
+        document.getElementById("inputSemestre").classList.remove("bord2");
 
-        if (!inputSemestre) {
-          j++;
-          document.getElementById("inputSemestre").classList.remove("bord2");
-          document.getElementById("inputSemestre").classList.add("bord1");
-        } else {
-          document.getElementById("inputSemestre").classList.remove("bord1");
-          document.getElementById("inputSemestre").classList.add("bord2");
-        }
-
-        if (j == 0) {
-            document.getElementById("inputSemestre").classList.remove("bord2");
-            
-          //alert(idStudent);
-          addGrade(idStudent,fullName);
-        }
-        //
+        //alert(idStudent);
+        addGrade(idStudent, fullName);
       }
-      
-   
-  function addGrade(idStudent,fullName) {
-    
+      //
+    }
 
-    //alert(document.getElementById("i"+idStudent));
-    var semestre= document.getElementById("inputSemestre").value;
 
-  var url = "http://127.0.0.1:3000/notes"; 
-    var data = {};
+    function addGrade(idStudent, fullName) {
 
-    data.idStudent = idStudent; 
 
-      data.nom = fullName+"_Bulletin "+semestre;
+      //alert(document.getElementById("i"+idStudent));
+      var semestre = document.getElementById("inputSemestre").value;
 
-      data.mediaLink = document.getElementById("i"+idStudent).value;
+      var url = "http://127.0.0.1:3000/notes";
+      var data = {};
 
-      data.remarque= "";
+      data.idStudent = idStudent;
+
+      data.nom = fullName + "_Bulletin " + semestre;
+
+      data.mediaLink = document.getElementById("i" + idStudent).value;
+
+      data.remarque = "";
 
       var json = JSON.stringify(data); // Convertir la variable de données en JSON.
-      var xhr = new XMLHttpRequest(); 
-      xhr.open("POST", url, true); 
-      xhr.setRequestHeader("Content-type", "application/json; charset=utf-8"); 
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", url, true);
+      xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
 
 
       // Load les données à partir de la serveur -> début connection
@@ -593,8 +595,8 @@ function uploadFile(id) {
         // Si le status retourné par le serveur est 200
         if (xhr.readyState == 4 && xhr.status == "200") {
           //alert("Classe Added");
-          document.getElementById(idStudent).innerHTML=`
-          <button type="submit" class="btn btn-success" id="`+idStudent+`" >Done</button>
+          document.getElementById(idStudent).innerHTML = `
+          <button type="submit" class="btn btn-success" id="`+ idStudent + `" >Done</button>
             `;
         } else {
           alert(response.message);
@@ -602,14 +604,14 @@ function uploadFile(id) {
         }
       };
       xhr.send(json);
-    
-    
-  }
 
-    </script>
 
-    <!--TRI-->
-<script>
+    }
+
+  </script>
+
+  <!--TRI-->
+  <script>
     const myTimeout = setTimeout(sortTable, 300);
     function sortTable() {
       var table, rows, switching, i, x, y, shouldSwitch;
@@ -647,42 +649,42 @@ function uploadFile(id) {
     }
   </script>
 
-    <script>
-        function deleteFile(id){
+  <script>
+    function deleteFile(id) {
 
-            document.getElementById("btn"+id).disabled=true;
+      document.getElementById("btn" + id).disabled = true;
 
-            var i = document.getElementById("i"+id).value= "";
+      var i = document.getElementById("i" + id).value = "";
 
 
-            document.getElementById("upload"+id).innerHTML=`
+      document.getElementById("upload" + id).innerHTML = `
             <div class="form-group" >
                       <span class="btn btn-success col" onclick="uploadFile('${id}');">
                         
                         <i class="fas fa-plus"></i>
                         <span>Upload Media</span>
-                        <input  type="hidden" id="i`+id+`" name="i"/>
+                        <input  type="hidden" id="i`+ id + `" name="i"/>
                       </span>
                       
                   </div>`;
-        }
-    </script>
+    }
+  </script>
 
-    <script>
-        document.getElementById("userName").innerHTML = localStorage.getItem("usernameA");
-    </script>
+  <script>
+    document.getElementById("userName").innerHTML = localStorage.getItem("usernameA");
+  </script>
 
-    <!--LOgout-->
-    <script>
-        function logout() {
-            var d = window.confirm("want to LogOut");
-            if (d == true) {
-                // localStorage.removeItem("idA");
-                localStorage.clear();
-                location.href = "signIn.html";
-            }
-        }
-    </script>
+  <!--LOgout-->
+  <script>
+    function logout() {
+      var d = window.confirm("want to LogOut");
+      if (d == true) {
+        // localStorage.removeItem("idA");
+        localStorage.clear();
+        location.href = "signIn.html";
+      }
+    }
+  </script>
 </body>
 
 </html>

@@ -7,8 +7,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from preview.colorlib.com/theme/kiddos/teacher.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Aug 2023 17:45:04 GMT -->
-
 <head>
   <title>Kiddos - Student Space</title>
   <meta charset="utf-8">
@@ -69,7 +67,8 @@
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto" id="navBar">
           <li class="nav-item "><a href="index.html" class="nav-link pl-0">Home</a></li>
-          <li class="nav-item active"><a href="studentSpace.html" id="studentSpace" class="nav-link">Student Space</a></li>
+          <li class="nav-item active"><a href="studentSpace.html" id="studentSpace" class="nav-link">Student Space</a>
+          </li>
           <li class="nav-item"><a href="event.html" class="nav-link">Event</a></li>
           <li class="nav-item" id="requestPaper"><a href="requestPaper.html" class="nav-link">Request Paper</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
@@ -98,7 +97,7 @@
 
       <div class="row" id="studentCard">
 
-        
+
 
       </div>
 
@@ -106,7 +105,7 @@
       <div class="row no-gutters my-5" id="testScroll">
         <div class="col text-center">
           <div class="block-27">
-            <p><a   id="addChildBtn"  class="btn btn-secondary px-5 py-3">Add
+            <p><a id="addChildBtn" class="btn btn-secondary px-5 py-3">Add
                 Child</a></p>
           </div>
         </div>
@@ -114,7 +113,7 @@
     </div>
   </section>
 
-  
+
 
   <footer class="ftco-footer ftco-bg-dark ftco-section">
     <div class="container">
@@ -125,11 +124,13 @@
             <h2 class="ftco-heading-2">Have a Questions?</h2>
             <div class="block-23 mb-3">
               <ul>
-                <li><span class="icon icon-map-marker"></span><span class="text">Campus Universitaire Boukhzar, route de ceinture,
-                   Sousse</span></li>
-                <li><a href="tel:+"><span class="icon icon-phone"></span><span class="text">+77 23 727 122</span></a></li>
+                <li><span class="icon icon-map-marker"></span><span class="text">Campus Universitaire Boukhzar, route de
+                    ceinture,
+                    Sousse</span></li>
+                <li><a href="tel:+"><span class="icon icon-phone"></span><span class="text">+77 23 727 122</span></a>
+                </li>
                 <li><a href="mailTo:wael.ch.71@gmail.com"><span class="icon icon-envelope"></span>
-                  <span class="text">School@gmail.com</span></a></li>
+                    <span class="text">School@gmail.com</span></a></li>
 
                 </li>
               </ul>
@@ -144,8 +145,10 @@
             <ul class="list-unstyled">
               <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
               <li><a href="event.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Events</a></li>
-              <li><a href="requestPaper.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Request Paper</a></li>
-              <li><a href="#" onclick="goToProfile();"><span class="ion-ios-arrow-round-forward mr-2"></span>Profile</a></li>
+              <li><a href="requestPaper.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Request Paper</a>
+              </li>
+              <li><a href="#" onclick="goToProfile();"><span class="ion-ios-arrow-round-forward mr-2"></span>Profile</a>
+              </li>
               <li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact Us</a></li>
 
             </ul>
@@ -165,9 +168,12 @@
           <div class="ftco-footer-widget mb-5">
             <h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
             <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-              <li class="ftco-animate"><a href="https://www.twitter.com" target="_blank"><span class="icon-twitter"></span></a></li>
-              <li class="ftco-animate"><a href="https://www.facebook.com" target="_blank"><span class="icon-facebook"></span></a></li>
-              <li class="ftco-animate"><a href="https://www.instagram.com" target="_blank"><span class="icon-instagram"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.twitter.com" target="_blank"><span
+                    class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.facebook.com" target="_blank"><span
+                    class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.instagram.com" target="_blank"><span
+                    class="icon-instagram"></span></a></li>
             </ul>
           </div>
         </div>
@@ -196,37 +202,38 @@
         stroke="#F96D00" />
     </svg></div>
 
-    <!-- Modal -->
-    <div id="addModel" class="modal"  >
-      <div class="modal-content" >
-        <div class="modal-header">
-          <h5 class="modal-title">Search for a Student</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+  <!-- Modal -->
+  <div id="addModel" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Search for a Student</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modelBody" style="height: 350px; ">
+        <div class="input-group input-group-sm">
+          <label>N° d'inscription</label>
+          <input type="text" id="inputSearch" onchange="search()" name="table_search" class="form-control "
+            placeholder="Search">
         </div>
-        <div class="modal-body" id="modelBody" style="height: 350px; ">
-          <div class="input-group input-group-sm" >
-            <label>N° d'inscription</label>
-            <input type="text" id="inputSearch" onchange="search()" name="table_search" class="form-control " placeholder="Search">
-          </div>
-          <br>
+        <br>
 
-          <div class="card-body table-responsive p-0">
-            <table class="table table-hover text-nowrap" id="searchResult">
+        <div class="card-body table-responsive p-0">
+          <table class="table table-hover text-nowrap" id="searchResult">
 
           </table>
-          </div>
-          
         </div>
-        <div class="modal-footer" id="footerBtn">
-          <button type="button" class="btn btn-secondary" id="closeBtn2" data-dismiss="modal">Close</button>
 
-          <button type="button" id="searchBtn" onclick="search();" class="btn btn-primary">Search</button>
-        </div>
+      </div>
+      <div class="modal-footer" id="footerBtn">
+        <button type="button" class="btn btn-secondary" id="closeBtn2" data-dismiss="modal">Close</button>
+
+        <button type="button" id="searchBtn" onclick="search();" class="btn btn-primary">Search</button>
       </div>
     </div>
-    
+  </div>
+
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -259,41 +266,41 @@
     data-cf-beacon='{"rayId":"7f105eb1ac980e71","version":"2023.7.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}'
     crossorigin="anonymous"></script>
 
-    <!--Open modal-->
-    <script>
-      // Get the modal element
-var modal = document.getElementById("addModel");
+  <!--Open modal-->
+  <script>
+    // Get the modal element
+    var modal = document.getElementById("addModel");
 
-// Get the button that opens the modal (if you have one)
-var btn = document.getElementById("addChildBtn"); // Change to your button's ID
+    // Get the button that opens the modal (if you have one)
+    var btn = document.getElementById("addChildBtn"); // Change to your button's ID
 
-// Get the <span> element that closes the modal
-var closeBtn = document.getElementsByClassName("close")[0];
+    // Get the <span> element that closes the modal
+    var closeBtn = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
 
-// When the user clicks on <span> (x), close the modal
-closeBtn.onclick = function() {
-  modal.style.display = "none";
-}
+    // When the user clicks on <span> (x), close the modal
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    }
 
-var closeBtn2=document.getElementById("closeBtn2");
+    var closeBtn2 = document.getElementById("closeBtn2");
 
-closeBtn2.onclick = function() {
-  modal.style.display = "none";
-}
+    closeBtn2.onclick = function () {
+      modal.style.display = "none";
+    }
 
-// When the user clicks anywhere outside the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+    // When the user clicks anywhere outside the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
 
-    </script>
+  </script>
 
   <!--Get Students-->
   <script>
@@ -310,9 +317,9 @@ window.onclick = function(event) {
 
       listStudent = JSON.stringify(data);
 
-      var studentCard=document.getElementById("studentCard");
+      var studentCard = document.getElementById("studentCard");
 
-      var classeName= "aa";
+      var classeName = "aa";
 
       //console.log(data);
       data.forEach((i) => {
@@ -324,48 +331,48 @@ window.onclick = function(event) {
           <div class="col-md-6 col-lg-3 ">
           <div class="staff">
             <div class="img-wrap d-flex align-items-stretch">
-              <a href="studentConsult.html?id=`+i._id+`" class="img align-self-stretch"
+              <a href="studentConsult.html?id=`+ i._id + `" class="img align-self-stretch"
                 style="background-image: url(images/teacher-1.jpg);"></a>
             </div>
             <div class="text pt-3 text-center" >
               <div id="test">
-              <h3>`+i.nom+" "+i.prenom+`</h3>
-              <span class="position mb-2" id="`+i._id+`"></span>
+              <h3>`+ i.nom + " " + i.prenom + `</h3>
+              <span class="position mb-2" id="`+ i._id + `"></span>
               </div>
 
               <div class="faded">
-                <p id="remarque">`+i.remarque+`</p>
+                <p id="remarque">`+ i.remarque + `</p>
 
               </div>
             </div>
           </div>
         </div>
 					 ` ;
-           studentCard.insertAdjacentHTML("beforeend", ch);
+          studentCard.insertAdjacentHTML("beforeend", ch);
 
-           $.getJSON(
-        "http://127.0.0.1:3000/classes/" + i.idClasse,
-        function (classe) {
-          document.getElementById(i._id).innerHTML=classe.nom;
-        
-        }
-      );
+          $.getJSON(
+            "http://127.0.0.1:3000/classes/" + i.idClasse,
+            function (classe) {
+              document.getElementById(i._id).innerHTML = classe.nom;
 
-           //TODO CLASSE
-           /*
-           var lastStaff = studentCard.querySelector(".staff:last-child");
+            }
+          );
 
-    // Get the <span> element within the current .staff element
-    var spanElement = lastStaff.querySelector(".test span");
-    
-           $.getJSON(
-        "http://127.0.0.1:3000/classes/" + i.idClasse,
-        function (classe) {
-          spanElement.textContent = classe.nom;
-        
-        }
-      );
-           */
+          //TODO CLASSE
+          /*
+          var lastStaff = studentCard.querySelector(".staff:last-child");
+
+   // Get the <span> element within the current .staff element
+   var spanElement = lastStaff.querySelector(".test span");
+   
+          $.getJSON(
+       "http://127.0.0.1:3000/classes/" + i.idClasse,
+       function (classe) {
+         spanElement.textContent = classe.nom;
+       
+       }
+     );
+          */
 
         }
 
@@ -378,135 +385,135 @@ window.onclick = function(event) {
 
   <!--serach child-->
   <script>
-    var searchResult ="";
-    function search(){
-      var data=JSON.parse(listStudent);
+    var searchResult = "";
+    function search() {
+      var data = JSON.parse(listStudent);
 
-      var inputSearch= document.getElementById("inputSearch").value;
+      var inputSearch = document.getElementById("inputSearch").value;
 
-      var table= document.getElementById("searchResult");
+      var table = document.getElementById("searchResult");
 
-      
+
 
       data.forEach((i) => {
-      
-        if(i.numInscription ==inputSearch){
 
-          searchResult=JSON.stringify(i);
+        if (i.numInscription == inputSearch) {
+
+          searchResult = JSON.stringify(i);
 
           //modelBody.style.width = "400px";
           // Insérer une ligne dans le tableau
-      var row = table.insertRow(-1);
-      // Insérer des cellules dans le tableau
-      var cell1 = row.insertCell(0);
-      var cell2 = row.insertCell(1);
-      var cell3 = row.insertCell(2);
-      var cell4 = row.insertCell(3);
+          var row = table.insertRow(-1);
+          // Insérer des cellules dans le tableau
+          var cell1 = row.insertCell(0);
+          var cell2 = row.insertCell(1);
+          var cell3 = row.insertCell(2);
+          var cell4 = row.insertCell(3);
 
-      
-      cell1.innerHTML = i.nom;
-      cell2.innerHTML = i.prenom;
-      cell3.innerHTML = i.dateDeNaissance;
-      cell4.innerHTML = `<div class="icheck-primary">
+
+          cell1.innerHTML = i.nom;
+          cell2.innerHTML = i.prenom;
+          cell3.innerHTML = i.dateDeNaissance;
+          cell4.innerHTML = `<div class="icheck-primary">
               <input type="checkbox" id="selectStudent">
               
             </div>`;
 
-        var footerBtn= document.getElementById("footerBtn");
-        footerBtn.innerHTML= `
+          var footerBtn = document.getElementById("footerBtn");
+          footerBtn.innerHTML = `
         <button type="button" class="btn btn-secondary" id="closeBtn2" data-dismiss="modal">Close</button>
 
         <button type="button" id="searchBtn" onclick="addIdParent();" class="btn btn-primary">Add Student</button>
         `;
-        //searchBtn.disabled= true;
-        
+          //searchBtn.disabled= true;
+
         }
-    });
-    
-  }
+      });
+
+    }
   </script>
 
   <!--ADDchild-->
   <script>
-    function addIdParent(){
-      var check=document.getElementById("selectStudent").checked;
-      if(!check){
+    function addIdParent() {
+      var check = document.getElementById("selectStudent").checked;
+      if (!check) {
         return;
-      }else{
+      } else {
 
         var data = JSON.parse(searchResult);
 
-      data.idParent=localStorage.getItem("idUser");
-        
-      var url3 = "http://127.0.0.1:3000/students/" + data._id;
-      
+        data.idParent = localStorage.getItem("idUser");
 
-      var json = JSON.stringify(data); // Convertir la variable de données en JSON.
-      var xhr = new XMLHttpRequest();
-      xhr.open("PUT", url3, true);
-      xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
+        var url3 = "http://127.0.0.1:3000/students/" + data._id;
 
 
-      // Load les données à partir de la serveur -> début connection
-      xhr.onload = function () {
-        var response = JSON.parse(xhr.responseText); // Conversion des données en format json
-        // Si le status retourné par le serveur est 200
-        if (xhr.readyState == 4 && xhr.status == "200") {
-          //alert("Classe Added");
-          location.replace("studentSpace.html");
-        } else {
-          alert(response.message);
-          console.table(response);
-        }
-      };
-      xhr.send(json);
+        var json = JSON.stringify(data); // Convertir la variable de données en JSON.
+        var xhr = new XMLHttpRequest();
+        xhr.open("PUT", url3, true);
+        xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
 
-      
+
+        // Load les données à partir de la serveur -> début connection
+        xhr.onload = function () {
+          var response = JSON.parse(xhr.responseText); // Conversion des données en format json
+          // Si le status retourné par le serveur est 200
+          if (xhr.readyState == 4 && xhr.status == "200") {
+            //alert("Classe Added");
+            location.replace("studentSpace.html");
+          } else {
+            alert(response.message);
+            console.table(response);
+          }
+        };
+        xhr.send(json);
+
+
       }
-      
-      
+
+
     }
   </script>
 
-<script>
-  var navBar = document.getElementById('navBar');
+  <script>
+    var navBar = document.getElementById('navBar');
 
-  var newItem = document.createElement("li");
-  newItem.className = "nav-item";
-
-
-
-  if (!localStorage.getItem("idUser") && !localStorage.getItem("idStudent")) {
-
-    newItem.innerHTML = '<a href="signIn.html" class="nav-link"><button type="button" class="btn btn-primary">Log In</button></a>';
-  } else {
-
-    newItem.innerHTML = '<a href="#" onclick="goToProfile();" title="Profile" class="nav-link nav-links"><div class="menu-user-image"><img src="images/profile.png" class="menu-user-img ml-1" alt=""> </div></a>';
-  }
-
-  navBar.appendChild(newItem);
-
-  var liElement = document.getElementById("requestPaper");
-
-  var a = document.getElementById("studentSpace");
-  if (!localStorage.getItem("idUser")) {
-
-    a.href = "studentConsult.html?id=" + localStorage.getItem("idStudent");
-    liElement.remove();
-  } else {
-    a.href = "studentSpace.html";
-
-  }
+    var newItem = document.createElement("li");
+    newItem.className = "nav-item";
 
 
-  function goToProfile() {
-    if (!localStorage.getItem("idUser")) {
-      location.replace("profileStudent.html");
+
+    if (!localStorage.getItem("idUser") && !localStorage.getItem("idStudent")) {
+
+      newItem.innerHTML = '<a href="signIn.html" class="nav-link"><button type="button" class="btn btn-primary">Log In</button></a>';
     } else {
-      location.replace("profileParent.html");
+
+      newItem.innerHTML = '<a href="#" onclick="goToProfile();" title="Profile" class="nav-link nav-links"><div class="menu-user-image"><img src="images/profile.png" class="menu-user-img ml-1" alt=""> </div></a>';
     }
-  }
-</script>
+
+    navBar.appendChild(newItem);
+
+    var liElement = document.getElementById("requestPaper");
+
+    var a = document.getElementById("studentSpace");
+    if (!localStorage.getItem("idUser")) {
+
+      a.href = "studentConsult.html?id=" + localStorage.getItem("idStudent");
+      liElement.remove();
+    } else {
+      a.href = "studentSpace.html";
+
+    }
+
+
+    function goToProfile() {
+      if (!localStorage.getItem("idUser")) {
+        location.replace("profileStudent.html");
+      } else {
+        location.replace("profileParent.html");
+      }
+    }
+  </script>
 
 </body>
 

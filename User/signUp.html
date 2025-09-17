@@ -1,20 +1,22 @@
 <script>
   if (!localStorage.getItem("idUser") && !localStorage.getItem("idStudent")) {
     console.log("");
-  }else{
+  } else {
     window.location = "index.html";
   }
 </script>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> Log in</title>
 
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- icheck bootstrap -->
@@ -25,27 +27,27 @@
 
 <body class="hold-transition login-page">
 
-<div class="register-box">
-  <div class="register-logo">
-    <a ><b>Sign Up</b></a>
-  </div>
+  <div class="register-box">
+    <div class="register-logo">
+      <a><b>Sign Up</b></a>
+    </div>
 
-  <div class="card">
-    <div class="card-body register-card-body">
-      <p class="login-box-msg">Register a new membership</p>
+    <div class="card">
+      <div class="card-body register-card-body">
+        <p class="login-box-msg">Register a new membership</p>
 
-      <form id="registerForm" onsubmit="return false">
+        <form id="registerForm" onsubmit="return false">
 
-        <div class="input-group form-group mb-3">
-          <input type="text" class="form-control" placeholder="nom" id="inputName" name="inputName">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-user"></span>
+          <div class="input-group form-group mb-3">
+            <input type="text" class="form-control" placeholder="nom" id="inputName" name="inputName">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-user"></span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="input-group form-group mb-3">
+          <div class="input-group form-group mb-3">
             <input type="text" class="form-control" placeholder="prenom" id="inputPrenom" name="inputPrenom">
             <div class="input-group-append">
               <div class="input-group-text">
@@ -54,186 +56,187 @@
             </div>
           </div>
 
-        <div class="input-group form-group mb-3">
-          <input type="email" class="form-control" placeholder="Email" id="inputEmail" name="inputEmail">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
+          <div class="input-group form-group mb-3">
+            <input type="email" class="form-control" placeholder="Email" id="inputEmail" name="inputEmail">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-envelope"></span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div id="addPhone">
+          <div id="addPhone">
 
-        </div>
+          </div>
 
-        <div id="addCin">
-          
-        </div>
+          <div id="addCin">
 
-        <div class="input-group form-group mb-3">
-          <select name="inputType" onchange="addCinChamps();" id="inputType" class="form-control">
-            <option value="" disabled selected>Select a user</option>
-            <option value="parent">Parent</option>
-            <option value="student">Student</option>
-            
-          </select>
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-user"></span>
+          </div>
+
+          <div class="input-group form-group mb-3">
+            <select name="inputType" onchange="addCinChamps();" id="inputType" class="form-control">
+              <option value="" disabled selected>Select a user</option>
+              <option value="parent">Parent</option>
+              <option value="student">Student</option>
+
+            </select>
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-user"></span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="input-group form-group mb-3">
-          <input type="password" class="form-control" placeholder="Password" id="inputPassword" name="inputPassword">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
+          <div class="input-group form-group mb-3">
+            <input type="password" class="form-control" placeholder="Password" id="inputPassword" name="inputPassword">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="input-group form-group mb-3">
-          <input type="password" class="form-control" placeholder="Retype password" id="inputConfirmPassword" name="inputConfirmPassword">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
+          <div class="input-group form-group mb-3">
+            <input type="password" class="form-control" placeholder="Retype password" id="inputConfirmPassword"
+              name="inputConfirmPassword">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="agreeTerms" name="terms" value="agree">
-              <label for="agreeTerms">
-               I agree to the <a href="#">terms</a>
-              </label>
+          <div class="row">
+            <div class="col-8">
+              <div class="icheck-primary">
+                <input type="checkbox" id="agreeTerms" name="terms" value="agree">
+                <label for="agreeTerms">
+                  I agree to the <a href="#">terms</a>
+                </label>
+              </div>
             </div>
+            <!-- /.col -->
+            <div class="col-4">
+              <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </div>
+            <!-- /.col -->
           </div>
-          <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
-          </div>
-          <!-- /.col -->
-        </div>
-      </form>
+        </form>
 
-      <br>
+        <br>
 
-      <a href="signIn.html" class="text-center">I already have a membership</a>
-    </div>
-    <!-- /.form-box -->
-  </div><!-- /.card -->
-</div>
-<!-- /.register-box -->
+        <a href="signIn.html" class="text-center">I already have a membership</a>
+      </div>
+      <!-- /.form-box -->
+    </div><!-- /.card -->
+  </div>
+  <!-- /.register-box -->
 
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<!-- jquery-validation -->
-<script src="plugins/jquery-validation/jquery.validate.min.js"></script>
-<script src="plugins/jquery-validation/additional-methods.min.js"></script>
+  <!-- jquery-validation -->
+  <script src="plugins/jquery-validation/jquery.validate.min.js"></script>
+  <script src="plugins/jquery-validation/additional-methods.min.js"></script>
 
-<script>
+  <script>
 
     $(function () {
-    
+
       $.validator.setDefaults({
         submitHandler: function () {
           //alert( "Form successful submitted!" );
           register();
         }
       });
-      
+
       $('#registerForm').validate({
-  
+
         rules: {
-  
-  inputName: {
-    required: true,
-    minlength: 3,
-    maxlength: 15
-  },
-  
-  inputPrenom: {
-    required: true,
-    minlength: 3,
-    maxlength: 15
-  },
-  
-  inputEmail: {
-    required: true,
-    email: true,
-  },
 
-  inputPhone: {
-          required: true,
-          minlength: 8,
-          maxlength: 8
+          inputName: {
+            required: true,
+            minlength: 3,
+            maxlength: 15
+          },
+
+          inputPrenom: {
+            required: true,
+            minlength: 3,
+            maxlength: 15
+          },
+
+          inputEmail: {
+            required: true,
+            email: true,
+          },
+
+          inputPhone: {
+            required: true,
+            minlength: 8,
+            maxlength: 8
+          },
+
+          inputType: {
+            required: true,
+          },
+
+          inputPassword: {
+            required: true,
+            minlength: 8,
+
+          },
+
+          inputConfirmPassword: {
+            required: true,
+            minlength: 8,
+            equalTo: '#inputPassword',
+          },
         },
 
-  inputType: {
-    required: true,
-  },
-  
-  inputPassword: {
-    required: true,
-    minlength: 8,
-    
-  },
-  
-  inputConfirmPassword: {
-    required: true,
-    minlength: 8,
-    equalTo: '#inputPassword',
-  },
-  },
-  
-  messages: {
-  
-  inputName: {
-    required: "Please enter a Name",
-    minlength: "Your name must be at least 3 characters long",
-    maxlength: "Please enter a valid name"
-  },
-  
-  inputPrenom: {
-    required: "Please enter a prenom",
-    minlength: "Your prename must be at least 3 characters long",
-    maxlength: "Please enter a valid Prenom"
-  },
-  
-  inputEmail: {
-    required: "Please enter a email address",
-    email: "Please enter a valid email address"
-  },
+        messages: {
 
-  inputPhone: {
-          required: "Please enter a phone number",
-          minlength: "Please enter a valid phone number",
-          maxlength: "Please enter a valid phone number"
+          inputName: {
+            required: "Please enter a Name",
+            minlength: "Your name must be at least 3 characters long",
+            maxlength: "Please enter a valid name"
+          },
+
+          inputPrenom: {
+            required: "Please enter a prenom",
+            minlength: "Your prename must be at least 3 characters long",
+            maxlength: "Please enter a valid Prenom"
+          },
+
+          inputEmail: {
+            required: "Please enter a email address",
+            email: "Please enter a valid email address"
+          },
+
+          inputPhone: {
+            required: "Please enter a phone number",
+            minlength: "Please enter a valid phone number",
+            maxlength: "Please enter a valid phone number"
+          },
+
+          inputType: {
+            required: "Please select a user",
+          },
+
+          inputPassword: {
+            required: "Please enter a password",
+            minlength: "The password must be at least 8 characters long"
+          },
+
+          inputConfirmPassword: {
+            required: "Please re-type the password",
+            minlength: "The password must be at least 8 characters long",
+            equalTo: "The password is not confirmed"
+
+          },
+
         },
 
-  inputType: {
-    required: "Please select a user",
-  },
-  
-  inputPassword: {
-    required: "Please enter a password",
-    minlength: "The password must be at least 8 characters long"
-  },
-  
-  inputConfirmPassword: {
-    required: "Please re-type the password",
-    minlength: "The password must be at least 8 characters long",
-    equalTo: "The password is not confirmed"
-  
-  },
-  
-  },
-  
         errorElement: 'span',
         errorPlacement: function (error, element) {
           error.addClass('invalid-feedback');
@@ -247,37 +250,37 @@
         }
       });
     });
-    
-        function register() {
 
-          if(document.getElementById("inputType").value=="parent"){
-            registreParent();
-          }else{
-            registreStudent();
-          }
-        }
-      </script>
+    function register() {
 
-      <script>
+      if (document.getElementById("inputType").value == "parent") {
+        registreParent();
+      } else {
+        registreStudent();
+      }
+    }
+  </script>
 
-        function registreParent(){
-          var url = "http://127.0.0.1:3000/users";
-  
-        var data = {};
-        
-        data.nom = document.getElementById("inputName").value;
-        data.prenom = document.getElementById("inputPrenom").value;
-        data.email = document.getElementById("inputEmail").value;
-        data.phone = document.getElementById("inputPhone").value;
+  <script>
 
-        data.cin = document.getElementById("inputCin").value;
+    function registreParent() {
+      var url = "http://127.0.0.1:3000/users";
 
-        data.password = document.getElementById("inputPassword").value;
+      var data = {};
 
-        var json = JSON.stringify(data); 
-      var xhr = new XMLHttpRequest(); 
-      xhr.open("POST", url, true); 
-      xhr.setRequestHeader("Content-type", "application/json; charset=utf-8"); 
+      data.nom = document.getElementById("inputName").value;
+      data.prenom = document.getElementById("inputPrenom").value;
+      data.email = document.getElementById("inputEmail").value;
+      data.phone = document.getElementById("inputPhone").value;
+
+      data.cin = document.getElementById("inputCin").value;
+
+      data.password = document.getElementById("inputPassword").value;
+
+      var json = JSON.stringify(data);
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", url, true);
+      xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
 
 
       // Load les données à partir de la serveur -> début connection
@@ -285,116 +288,116 @@
         var response = JSON.parse(xhr.responseText); // Conversion des données en format json
         // Si le status retourné par le serveur est 200
         if (xhr.readyState == 4 && xhr.status == "200") {
-          
+
           //alert("welcome");
           location.replace("signIn.html");
         } else {
           alert(response.message);
-          
+
         }
       };
       xhr.send(json);
-        }
-      
-        function registreStudent(){
-          var url = "http://127.0.0.1:3000/students"; 
-    var email = document.getElementById("inputEmail").value; 
-    var numInscrit = document.getElementById("inputNumInscrit").value; 
+    }
 
-    var nom =document.getElementById("inputName").value;
+    function registreStudent() {
+      var url = "http://127.0.0.1:3000/students";
+      var email = document.getElementById("inputEmail").value;
+      var numInscrit = document.getElementById("inputNumInscrit").value;
 
-    var prenom= document.getElementById("inputPrenom").value;
+      var nom = document.getElementById("inputName").value;
 
-    var acces=false;
-    var xhr = new XMLHttpRequest(); 
-    xhr.open("GET", url, true); 
-    xhr.setRequestHeader("Content-type", "application/json; charset=utf-8"); 
-    xhr.onload = function () {
-      
-      var students = JSON.parse(xhr.responseText); 
-      if (xhr.readyState == 4 && xhr.status == "200") {
-        
-        
-        for (i = 0; i < students.length; i++) {
-          if (students[i].email == email && students[i].numInscription == numInscrit && students[i].nom ==nom && students[i].prenom ==prenom) {
+      var prenom = document.getElementById("inputPrenom").value;
 
-            getStudentandSave(students[i]._id);
-            acces=true;
+      var acces = false;
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url, true);
+      xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
+      xhr.onload = function () {
+
+        var students = JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+
+
+          for (i = 0; i < students.length; i++) {
+            if (students[i].email == email && students[i].numInscription == numInscrit && students[i].nom == nom && students[i].prenom == prenom) {
+
+              getStudentandSave(students[i]._id);
+              acces = true;
+            }
           }
+          if (!acces) {
+            alert("Please verify your info");
+          }
+        } else {
+          alert("Error Server Connection");
         }
-        if(!acces){
-          alert("Please verify your info");
-        }  
-      } else {
-        alert("Error Server Connection");
-      }
-    };
-    xhr.send();
-        }
+      };
+      xhr.send();
+    }
 
-        function getStudentandSave(id){
+    function getStudentandSave(id) {
 
-          $.getJSON(
+      $.getJSON(
         "http://127.0.0.1:3000/students/" + id,
         function (student) {
           // update a user 
-  var url3 = "http://127.0.0.1:3000/students/" + id;
-  var data = {};
-      
-      data.nom = student.nom; 
-      data.prenom = student.prenom;
-      data.email = student.email;
-      data.phone = student.phone;
+          var url3 = "http://127.0.0.1:3000/students/" + id;
+          var data = {};
 
-      data.idClasse = student.idClasse;
+          data.nom = student.nom;
+          data.prenom = student.prenom;
+          data.email = student.email;
+          data.phone = student.phone;
 
-      data.numInscription = student.numInscription;
+          data.idClasse = student.idClasse;
 
-      data.idParent= student.idParent;
+          data.numInscription = student.numInscription;
 
-      data.dateDeNaissance =student.dateDeNaissance;
-      data.dateInscription = student.dateInscription;
+          data.idParent = student.idParent;
 
-      data.etatActuelle = student.etatActuelle;
-      data.remarque = student.remarque;
-      data.password = document.getElementById("inputPassword").value;
+          data.dateDeNaissance = student.dateDeNaissance;
+          data.dateInscription = student.dateInscription;
 
-
-      var json = JSON.stringify(data); // Convertir la variable de données en JSON.
-      var xhr = new XMLHttpRequest(); 
-      xhr.open("PUT", url3, true); 
-      xhr.setRequestHeader("Content-type", "application/json; charset=utf-8"); 
+          data.etatActuelle = student.etatActuelle;
+          data.remarque = student.remarque;
+          data.password = document.getElementById("inputPassword").value;
 
 
-      // Load les données à partir de la serveur -> début connection
-      xhr.onload = function () {
-        var response = JSON.parse(xhr.responseText); // Conversion des données en format json
-        // Si le status retourné par le serveur est 200
-        if (xhr.readyState == 4 && xhr.status == "200") {
-          localStorage.setItem("idStudent", student._id);
-            localStorage.setItem("userName", student.nom+" "+student.prenom);
-          location.replace("index.html");
-        } else {
-          alert(response.message);
-          console.table(response);
-        }
-      };
-      xhr.send(json);
+          var json = JSON.stringify(data); // Convertir la variable de données en JSON.
+          var xhr = new XMLHttpRequest();
+          xhr.open("PUT", url3, true);
+          xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
+
+
+          // Load les données à partir de la serveur -> début connection
+          xhr.onload = function () {
+            var response = JSON.parse(xhr.responseText); // Conversion des données en format json
+            // Si le status retourné par le serveur est 200
+            if (xhr.readyState == 4 && xhr.status == "200") {
+              localStorage.setItem("idStudent", student._id);
+              localStorage.setItem("userName", student.nom + " " + student.prenom);
+              location.replace("index.html");
+            } else {
+              alert(response.message);
+              console.table(response);
+            }
+          };
+          xhr.send(json);
         }
       );
 
-        }
-      </script>
+    }
+  </script>
 
-      <!--ADD champs cin-->
-      <script>
-        function addCinChamps(){
-          var container = document.getElementById("addCin");
-           var phoneContainer= document.getElementById("addPhone");
-          if(document.getElementById("inputType").value=="parent"){
-            
-            //container.classList.add("");
-            container.innerHTML= `
+  <!--ADD champs cin-->
+  <script>
+    function addCinChamps() {
+      var container = document.getElementById("addCin");
+      var phoneContainer = document.getElementById("addPhone");
+      if (document.getElementById("inputType").value == "parent") {
+
+        //container.classList.add("");
+        container.innerHTML = `
             <div class="input-group form-group mb-3" id="addCinInner">
             <input type="number" class="form-control" placeholder="Cin" id="inputCin" name="inputCin" maxlength="8" minlength="8" required>
           <div class="input-group-append">
@@ -404,7 +407,7 @@
           </div></div>
             `;
 
-            phoneContainer.innerHTML= `
+        phoneContainer.innerHTML = `
             <div class="input-group form-group mb-3" id="phoneContainer">
           <input type="number" class="form-control" placeholder="Tel" id="inputPhone" name="inputPhone">
           <div class="input-group-append">
@@ -413,8 +416,8 @@
             </div>
           </div>
         </div>`;
-          }else{
-            container.innerHTML= `
+      } else {
+        container.innerHTML = `
             <div class="input-group form-group mb-3" id="addCinInner">
             <input type="number" class="form-control" placeholder="N° d'inscription" id="inputNumInscrit" name="inputNumInscrit" maxlength="8" minlength="8" required>
           <div class="input-group-append">
@@ -424,12 +427,13 @@
           </div></div>
             `;
 
-            document.getElementById("phoneContainer").remove();
-          }
-        }
-      </script>
+        document.getElementById("phoneContainer").remove();
+      }
+    }
+  </script>
 
 
 
 </body>
+
 </html>

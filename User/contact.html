@@ -7,8 +7,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from preview.colorlib.com/theme/kiddos/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Aug 2023 17:45:10 GMT -->
-
 <head>
   <title>Kiddos | Contact Us</title>
   <meta charset="utf-8">
@@ -136,11 +134,11 @@
               <input type="text" class="form-control" name="inputEmail" id="inputEmail" placeholder="Your Email">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" name="inputSubject" id="inputSubject"  placeholder="Subject">
+              <input type="text" class="form-control" name="inputSubject" id="inputSubject" placeholder="Subject">
             </div>
             <div class="form-group">
-              <textarea cols="30" rows="7" name="inputMessage" id="inputMessage"
-               class="form-control" placeholder="Message"></textarea>
+              <textarea cols="30" rows="7" name="inputMessage" id="inputMessage" class="form-control"
+                placeholder="Message"></textarea>
             </div>
             <div class="form-group">
               <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
@@ -167,11 +165,13 @@
             <h2 class="ftco-heading-2">Have a Questions?</h2>
             <div class="block-23 mb-3">
               <ul>
-                <li><span class="icon icon-map-marker"></span><span class="text">Campus Universitaire Boukhzar, route de ceinture,
-                   Sousse</span></li>
-                <li><a href="tel:+"><span class="icon icon-phone"></span><span class="text">+77 23 727 122</span></a></li>
+                <li><span class="icon icon-map-marker"></span><span class="text">Campus Universitaire Boukhzar, route de
+                    ceinture,
+                    Sousse</span></li>
+                <li><a href="tel:+"><span class="icon icon-phone"></span><span class="text">+77 23 727 122</span></a>
+                </li>
                 <li><a href="mailTo:wael.ch.71@gmail.com"><span class="icon icon-envelope"></span>
-                  <span class="text">School@gmail.com</span></a></li>
+                    <span class="text">School@gmail.com</span></a></li>
 
                 </li>
               </ul>
@@ -186,8 +186,10 @@
             <ul class="list-unstyled">
               <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
               <li><a href="event.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Events</a></li>
-              <li><a href="requestPaper.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Request Paper</a></li>
-              <li><a href="#" onclick="goToProfile();"><span class="ion-ios-arrow-round-forward mr-2"></span>Profile</a></li>
+              <li><a href="requestPaper.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Request Paper</a>
+              </li>
+              <li><a href="#" onclick="goToProfile();"><span class="ion-ios-arrow-round-forward mr-2"></span>Profile</a>
+              </li>
               <li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact Us</a></li>
 
             </ul>
@@ -207,9 +209,12 @@
           <div class="ftco-footer-widget mb-5">
             <h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
             <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-              <li class="ftco-animate"><a href="https://www.twitter.com" target="_blank"><span class="icon-twitter"></span></a></li>
-              <li class="ftco-animate"><a href="https://www.facebook.com" target="_blank"><span class="icon-facebook"></span></a></li>
-              <li class="ftco-animate"><a href="https://www.instagram.com" target="_blank"><span class="icon-instagram"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.twitter.com" target="_blank"><span
+                    class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.facebook.com" target="_blank"><span
+                    class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.instagram.com" target="_blank"><span
+                    class="icon-instagram"></span></a></li>
             </ul>
           </div>
         </div>
@@ -299,9 +304,9 @@
           inputMessage: {
             required: true,
             minlength: 5,
-            
+
           },
-          
+
 
         },
 
@@ -351,7 +356,7 @@
       data.subject = document.getElementById("inputSubject").value;
       data.messageText = document.getElementById("inputMessage").value;
       data.idSender = localStorage.getItem("idUser");
-      data.etat= "not vu";
+      data.etat = "not vu";
 
 
 
@@ -378,45 +383,45 @@
     }
   </script>
 
-<script>
-  var navBar = document.getElementById('navBar');
+  <script>
+    var navBar = document.getElementById('navBar');
 
-  var newItem = document.createElement("li");
-  newItem.className = "nav-item";
-
-
-
-  if (!localStorage.getItem("idUser") && !localStorage.getItem("idStudent")) {
-
-    newItem.innerHTML = '<a href="signIn.html" class="nav-link"><button type="button" class="btn btn-primary">Log In</button></a>';
-  } else {
-
-    newItem.innerHTML = '<a href="#" onclick="goToProfile();" title="Profile" class="nav-link nav-links"><div class="menu-user-image"><img src="images/profile.png" class="menu-user-img ml-1" alt=""> </div></a>';
-  }
-
-  navBar.appendChild(newItem);
-
-  var liElement = document.getElementById("requestPaper");
-
-  var a = document.getElementById("studentSpace");
-  if (!localStorage.getItem("idUser")) {
-
-    a.href = "studentConsult.html?id=" + localStorage.getItem("idStudent");
-    liElement.remove();
-  } else {
-    a.href = "studentSpace.html";
-
-  }
+    var newItem = document.createElement("li");
+    newItem.className = "nav-item";
 
 
-  function goToProfile() {
-    if (!localStorage.getItem("idUser")) {
-      location.replace("profileStudent.html");
+
+    if (!localStorage.getItem("idUser") && !localStorage.getItem("idStudent")) {
+
+      newItem.innerHTML = '<a href="signIn.html" class="nav-link"><button type="button" class="btn btn-primary">Log In</button></a>';
     } else {
-      location.replace("profileParent.html");
+
+      newItem.innerHTML = '<a href="#" onclick="goToProfile();" title="Profile" class="nav-link nav-links"><div class="menu-user-image"><img src="images/profile.png" class="menu-user-img ml-1" alt=""> </div></a>';
     }
-  }
-</script>
+
+    navBar.appendChild(newItem);
+
+    var liElement = document.getElementById("requestPaper");
+
+    var a = document.getElementById("studentSpace");
+    if (!localStorage.getItem("idUser")) {
+
+      a.href = "studentConsult.html?id=" + localStorage.getItem("idStudent");
+      liElement.remove();
+    } else {
+      a.href = "studentSpace.html";
+
+    }
+
+
+    function goToProfile() {
+      if (!localStorage.getItem("idUser")) {
+        location.replace("profileStudent.html");
+      } else {
+        location.replace("profileParent.html");
+      }
+    }
+  </script>
 
 </body>
 

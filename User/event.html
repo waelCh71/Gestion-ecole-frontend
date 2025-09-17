@@ -7,8 +7,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from preview.colorlib.com/theme/kiddos/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Aug 2023 17:45:09 GMT -->
-
 <head>
   <title> Kiddos | Events</title>
   <meta charset="utf-8">
@@ -84,8 +82,8 @@
         <div class="col-md-9 ftco-animate text-center">
           <h1 class="mb-2 bread">Our Events</h1>
           <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
-                  class="ion-ios-arrow-forward"></i></a></span> <span>Events 
-                    </p>
+                  class="ion-ios-arrow-forward"></i></a></span> <span>Events
+          </p>
         </div>
       </div>
     </div>
@@ -129,11 +127,13 @@
             <h2 class="ftco-heading-2">Have a Questions?</h2>
             <div class="block-23 mb-3">
               <ul>
-                <li><span class="icon icon-map-marker"></span><span class="text">Campus Universitaire Boukhzar, route de ceinture,
-                   Sousse</span></li>
-                <li><a href="tel:+"><span class="icon icon-phone"></span><span class="text">+77 23 727 122</span></a></li>
+                <li><span class="icon icon-map-marker"></span><span class="text">Campus Universitaire Boukhzar, route de
+                    ceinture,
+                    Sousse</span></li>
+                <li><a href="tel:+"><span class="icon icon-phone"></span><span class="text">+77 23 727 122</span></a>
+                </li>
                 <li><a href="mailTo:wael.ch.71@gmail.com"><span class="icon icon-envelope"></span>
-                  <span class="text">School@gmail.com</span></a></li>
+                    <span class="text">School@gmail.com</span></a></li>
 
                 </li>
               </ul>
@@ -148,8 +148,10 @@
             <ul class="list-unstyled">
               <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
               <li><a href="event.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Events</a></li>
-              <li><a href="requestPaper.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Request Paper</a></li>
-              <li><a href="#" onclick="goToProfile();"><span class="ion-ios-arrow-round-forward mr-2"></span>Profile</a></li>
+              <li><a href="requestPaper.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Request Paper</a>
+              </li>
+              <li><a href="#" onclick="goToProfile();"><span class="ion-ios-arrow-round-forward mr-2"></span>Profile</a>
+              </li>
               <li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact Us</a></li>
 
             </ul>
@@ -169,9 +171,12 @@
           <div class="ftco-footer-widget mb-5">
             <h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
             <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-              <li class="ftco-animate"><a href="https://www.twitter.com" target="_blank"><span class="icon-twitter"></span></a></li>
-              <li class="ftco-animate"><a href="https://www.facebook.com" target="_blank"><span class="icon-facebook"></span></a></li>
-              <li class="ftco-animate"><a href="https://www.instagram.com" target="_blank"><span class="icon-instagram"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.twitter.com" target="_blank"><span
+                    class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.facebook.com" target="_blank"><span
+                    class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.instagram.com" target="_blank"><span
+                    class="icon-instagram"></span></a></li>
             </ul>
           </div>
         </div>
@@ -199,7 +204,7 @@
         stroke="#F96D00" />
     </svg></div>
 
-    <!--Events-->
+  <!--Events-->
   <script>
     // Définir une requête de connection standard JS
     var request = new XMLHttpRequest();
@@ -213,9 +218,9 @@
       const eventContainer = document.getElementById('eventContainer');
 
       const months = [
-      "January", "February", "March", "April", "May", "June",
-      "July", "August", "September", "October", "November", "December"
-    ];
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
 
       data.forEach((i) => {
 
@@ -245,7 +250,7 @@
           
         </div>
 					 ` ;
-           eventContainer.insertAdjacentHTML("afterbegin", ch);
+        eventContainer.insertAdjacentHTML("afterbegin", ch);
 
       });
     };
@@ -288,46 +293,46 @@
     data-cf-beacon='{"rayId":"7f105ebe0bf60e05","version":"2023.7.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}'
     crossorigin="anonymous"></script>
 
-    
-    <script>
-      var navBar = document.getElementById('navBar');
-  
-      var newItem = document.createElement("li");
-      newItem.className = "nav-item";
-  
-  
-  
-      if (!localStorage.getItem("idUser") && !localStorage.getItem("idStudent")) {
-  
-        newItem.innerHTML = '<a href="signIn.html" class="nav-link"><button type="button" class="btn btn-primary">Log In</button></a>';
-      } else {
-  
-        newItem.innerHTML = '<a href="#" onclick="goToProfile();" title="Profile" class="nav-link nav-links"><div class="menu-user-image"><img src="images/profile.png" class="menu-user-img ml-1" alt=""> </div></a>';
-      }
-  
-      navBar.appendChild(newItem);
-  
-      var liElement = document.getElementById("requestPaper");
-  
-      var a = document.getElementById("studentSpace");
+
+  <script>
+    var navBar = document.getElementById('navBar');
+
+    var newItem = document.createElement("li");
+    newItem.className = "nav-item";
+
+
+
+    if (!localStorage.getItem("idUser") && !localStorage.getItem("idStudent")) {
+
+      newItem.innerHTML = '<a href="signIn.html" class="nav-link"><button type="button" class="btn btn-primary">Log In</button></a>';
+    } else {
+
+      newItem.innerHTML = '<a href="#" onclick="goToProfile();" title="Profile" class="nav-link nav-links"><div class="menu-user-image"><img src="images/profile.png" class="menu-user-img ml-1" alt=""> </div></a>';
+    }
+
+    navBar.appendChild(newItem);
+
+    var liElement = document.getElementById("requestPaper");
+
+    var a = document.getElementById("studentSpace");
+    if (!localStorage.getItem("idUser")) {
+
+      a.href = "studentConsult.html?id=" + localStorage.getItem("idStudent");
+      liElement.remove();
+    } else {
+      a.href = "studentSpace.html";
+
+    }
+
+
+    function goToProfile() {
       if (!localStorage.getItem("idUser")) {
-  
-        a.href = "studentConsult.html?id=" + localStorage.getItem("idStudent");
-        liElement.remove();
+        location.replace("profileStudent.html");
       } else {
-        a.href = "studentSpace.html";
-  
+        location.replace("profileParent.html");
       }
-  
-  
-      function goToProfile() {
-        if (!localStorage.getItem("idUser")) {
-          location.replace("profileStudent.html");
-        } else {
-          location.replace("profileParent.html");
-        }
-      }
-    </script>
+    }
+  </script>
 
 
 

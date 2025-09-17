@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from preview.colorlib.com/theme/kiddos/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Aug 2023 17:44:33 GMT -->
-
 <head>
   <title> Kiddos </title>
   <meta charset="utf-8">
@@ -155,7 +153,7 @@
         <div class="col-md-8 text-center heading-section ftco-animate">
           <h2 class="mb-4"><span>Recent</span> Events</h2>
           <p>Stay up-to-date with our latest happenings and noteworthy events. In this section, you'll find information
-             about our most recent activities, achievements, and milestones.</p>
+            about our most recent activities, achievements, and milestones.</p>
         </div>
       </div>
 
@@ -166,11 +164,11 @@
       <div class="row no-gutters my-5" id="testScroll">
         <div class="col text-center">
           <div class="block-27">
-            <p><a  href="event.html" class="btn btn-secondary px-5 py-3">Consult More</a></p>
+            <p><a href="event.html" class="btn btn-secondary px-5 py-3">Consult More</a></p>
           </div>
         </div>
       </div>
-      
+
     </div>
   </section>
 
@@ -297,11 +295,13 @@
             <h2 class="ftco-heading-2">Have a Questions?</h2>
             <div class="block-23 mb-3">
               <ul>
-                <li><span class="icon icon-map-marker"></span><span class="text">Campus Universitaire Boukhzar, route de ceinture,
-                   Sousse</span></li>
-                <li><a href="tel:+"><span class="icon icon-phone"></span><span class="text">+77 23 727 122</span></a></li>
+                <li><span class="icon icon-map-marker"></span><span class="text">Campus Universitaire Boukhzar, route de
+                    ceinture,
+                    Sousse</span></li>
+                <li><a href="tel:+"><span class="icon icon-phone"></span><span class="text">+77 23 727 122</span></a>
+                </li>
                 <li><a href="mailTo:wael.ch.71@gmail.com"><span class="icon icon-envelope"></span>
-                  <span class="text">School@gmail.com</span></a></li>
+                    <span class="text">School@gmail.com</span></a></li>
 
                 </li>
               </ul>
@@ -316,8 +316,10 @@
             <ul class="list-unstyled">
               <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
               <li><a href="event.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Events</a></li>
-              <li><a href="requestPaper.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Request Paper</a></li>
-              <li><a href="#" onclick="goToProfile();"><span class="ion-ios-arrow-round-forward mr-2"></span>Profile</a></li>
+              <li><a href="requestPaper.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Request Paper</a>
+              </li>
+              <li><a href="#" onclick="goToProfile();"><span class="ion-ios-arrow-round-forward mr-2"></span>Profile</a>
+              </li>
               <li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact Us</a></li>
 
             </ul>
@@ -337,9 +339,12 @@
           <div class="ftco-footer-widget mb-5">
             <h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
             <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-              <li class="ftco-animate"><a href="https://www.twitter.com" target="_blank"><span class="icon-twitter"></span></a></li>
-              <li class="ftco-animate"><a href="https://www.facebook.com" target="_blank"><span class="icon-facebook"></span></a></li>
-              <li class="ftco-animate"><a href="https://www.instagram.com" target="_blank"><span class="icon-instagram"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.twitter.com" target="_blank"><span
+                    class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.facebook.com" target="_blank"><span
+                    class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.instagram.com" target="_blank"><span
+                    class="icon-instagram"></span></a></li>
             </ul>
           </div>
         </div>
@@ -399,11 +404,11 @@
       const eventContainer = document.getElementById('eventContainer');
 
       const months = [
-      "January", "February", "March", "April", "May", "June",
-      "July", "August", "September", "October", "November", "December"
-    ];
-      var lengthData=data.length;
-      var j=0;
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+      var lengthData = data.length;
+      var j = 0;
       data.forEach((i) => {
 
         ch = `
@@ -431,10 +436,10 @@
           
         </div>
 					 ` ;
-           if(j>=lengthData-2){
-            eventContainer.insertAdjacentHTML("afterbegin", ch);
-           }
-           j+=1;
+        if (j >= lengthData - 2) {
+          eventContainer.insertAdjacentHTML("afterbegin", ch);
+        }
+        j += 1;
       });
     };
     // Send request

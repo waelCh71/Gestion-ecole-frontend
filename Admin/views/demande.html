@@ -6,13 +6,15 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> Paper Demande </title>
 
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
@@ -34,301 +36,303 @@
   <!-- Select2 -->
   <link rel="stylesheet" href="../plugins/select2/css/select2.min.css">
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+  <div class="wrapper">
 
-  <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="../dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-  </div>
+    <!-- Preloader -->
+    <div class="preloader flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src="../dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    </div>
 
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="../index.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="mailBox.html" class="nav-link">Inbox</a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
-
-
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <br>
-    <!-- Brand Logo -->
-    <a href="#" class="brand-link">
-      <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Admin</span>
-    </a>
-    <br>
-    <!--TODO 1-->
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="profile.html" class="d-block" id="userName"></a>
-        </div>
-      </div>
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="../index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="mailBox.html" class="nav-link">Inbox</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
 
 
-      <!-- SidebarSearch Form -->
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <br>
+      <!-- Brand Logo -->
+      <a href="#" class="brand-link">
+        <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+          style="opacity: .8">
+        <span class="brand-text font-weight-light">Admin</span>
+      </a>
+      <br>
+      <!--TODO 1-->
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="profile.html" class="d-block" id="userName"></a>
+          </div>
+        </div>
 
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
+
+        <!-- SidebarSearch Form -->
+        <br>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
-          <li class="nav-item menu-open">
-            <a href="../index.html" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-              </p>
-            </a>
-            
-          </li>
+            <li class="nav-item menu-open">
+              <a href="../index.html" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+                </p>
+              </a>
 
-          <br>
-      
-          <li class="nav-item">
-            <a href="#" class="nav-link ">
-              <i class="fas fa-user-graduate"></i>
-              <p>
-                Students
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="addStudent.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ADD</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="listStudent.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <br>
+            </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link ">
-              <i class="fas fa-school"></i>
-              <p>
-                Classes
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="addClasse.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ADD</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="listClasse.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <br>
+            <br>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-calendar-alt"></i>
-              <p>
-                Schedule
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="addSchedule.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ADD</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="listSchedule.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link ">
+                <i class="fas fa-user-graduate"></i>
+                <p>
+                  Students
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addStudent.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="listStudent.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <br>
 
+            <li class="nav-item">
+              <a href="#" class="nav-link ">
+                <i class="fas fa-school"></i>
+                <p>
+                  Classes
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addClasse.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="listClasse.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <br>
 
-          <br>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-calendar-alt"></i>
-              <p>
-                Events
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="addEvent.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ADD</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="events.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Event</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <br>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-user-cog"></i>
-              <p>
-                Users
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="addUser.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ADD</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="listUser.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <br>
-          <li class="nav-item">
-            <a href="demande.html" class="nav-link active">
-              <i class="fas fa-file"></i>
-              <p>
-                Paper Request 
-              </p>
-            </a>
-          </li>
-
-          <br>
-          <li class="nav-item">
-            <a href="" onclick="logout();" class="nav-link">
-              <i class="fas fa-sign-out-alt"></i>
-              <p>
-                Log Out
-                
-              </p>
-            </a>
-            
-          </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-calendar-alt"></i>
+                <p>
+                  Schedule
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addSchedule.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="listSchedule.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
 
 
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
+            <br>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-calendar-alt"></i>
+                <p>
+                  Events
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addEvent.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="events.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Event</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <br>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-user-cog"></i>
+                <p>
+                  Users
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addUser.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>ADD</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="listUser.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>List</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <br>
+            <li class="nav-item">
+              <a href="demande.html" class="nav-link active">
+                <i class="fas fa-file"></i>
+                <p>
+                  Paper Request
+                </p>
+              </a>
+            </li>
+
+            <br>
+            <li class="nav-item">
+              <a href="" onclick="logout();" class="nav-link">
+                <i class="fas fa-sign-out-alt"></i>
+                <p>
+                  Log Out
+
+                </p>
+              </a>
+
+            </li>
 
 
-  
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Paper Demande</h1>
-          </div><!-- /.col -->
-          
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-    <br>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
 
-    <!--TODO 2-->
-    <!-- Main content -->
 
-    <!--Search Section-->
-    <section class="content">
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
         <div class="container-fluid">
-            
-            <form onchange="filter();">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0">Paper Demande</h1>
+            </div><!-- /.col -->
+
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+      <br>
+
+      <!--TODO 2-->
+      <!-- Main content -->
+
+      <!--Search Section-->
+      <section class="content">
+        <div class="container-fluid">
+
+          <form onchange="filter();">
+            <div class="row">
+              <div class="col-md-10 offset-md-1">
                 <div class="row">
-                    <div class="col-md-10 offset-md-1">
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label>Result Type:</label>
-                                    <select  id="type"  style="width: 100%;">
-                                      <option selected>All</option>
-                                        <option>Attestation de Presence</option>
-                                        <option>Attestation d'inscription</option>
-                                        <option>Attestation de réussite</option>
-                                        <option>Relevée de Note</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-6">
-                              <div class="form-group">
-                                  <label>Etat:</label>
-                                  <select  id="etat"  style="width: 100%;">
-                                    <option selected>All</option>
-                                      <option>Ready</option>
-                                      <option>Not Ready</option>
-                                      
-                                  </select>
-                              </div>
-                          </div>
-                        </div>
-                        
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label>Result Type:</label>
+                      <select id="type" style="width: 100%;">
+                        <option selected>All</option>
+                        <option>Attestation de Presence</option>
+                        <option>Attestation d'inscription</option>
+                        <option>Attestation de réussite</option>
+                        <option>Relevée de Note</option>
+                      </select>
                     </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label>Etat:</label>
+                      <select id="etat" style="width: 100%;">
+                        <option selected>All</option>
+                        <option>Ready</option>
+                        <option>Not Ready</option>
+
+                      </select>
+                    </div>
+                  </div>
                 </div>
-            </form>
+
+              </div>
+            </div>
+          </form>
         </div>
-    </section>
-  
+      </section>
 
-    <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                
 
-                <div class="card-tools">
-                 <!-- <div class="input-group input-group-sm" style="width: 150px;">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+
+
+              <div class="card-tools">
+                <!-- <div class="input-group input-group-sm" style="width: 150px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
 
                     <div class="input-group-append">
@@ -337,164 +341,164 @@
                       </button>
                     </div>
                   </div>-->
-                </div>
               </div>
-              <!-- /.card-header -->
-              <div class="card-body table-responsive p-0">
-                <table class="table table-hover text-nowrap">
-                  <thead>
-                    <tr>
-                      <th>N°</th>
-                      <th>Type</th>
-                      <th>Date De demande</th>
-                      <th>Etat Actuelle</th>
-                      <th colspan="2"></th>
-                      
-                    </tr>
-                  </thead>
-                  <tbody id="listDemande">
-                    
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.card-body -->
             </div>
-            <!-- /.card -->
+            <!-- /.card-header -->
+            <div class="card-body table-responsive p-0">
+              <table class="table table-hover text-nowrap">
+                <thead>
+                  <tr>
+                    <th>N°</th>
+                    <th>Type</th>
+                    <th>Date De demande</th>
+                    <th>Etat Actuelle</th>
+                    <th colspan="2"></th>
+
+                  </tr>
+                </thead>
+                <tbody id="listDemande">
+
+                </tbody>
+              </table>
+            </div>
+            <!-- /.card-body -->
           </div>
+          <!-- /.card -->
         </div>
-    <!-- /.content -->
-  </div>
-
-
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2023 <a href="#"></a>Stage</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 1.0
+      </div>
+      <!-- /.content -->
     </div>
-  </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-
-<!-- jQuery -->
-<script src="../plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
-<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="../plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="../plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
-
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
-<script src="../plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../dist/js/demo.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="../dist/js/pages/dashboard.js"></script>
 
 
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+      <strong>Copyright &copy; 2023 <a href="#"></a>Stage</strong>
+      All rights reserved.
+      <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 1.0
+      </div>
+    </footer>
 
-<script>
-  // Définir une requête de connection standard JS
-  var request = new XMLHttpRequest();
-  // Choisir la méthode GET comme une méthode d'accès au serveur et récupérer les données .
-  request.open("GET", "http://127.0.0.1:3000/demandes", true);
-  // Load les données à partir de la serveur -> Début connection
-  request.onload = function () {
-    // Begin accessing JSON data here
-    var data = JSON.parse(this.response);
-    var table = document.getElementById("listDemande");
-    console.log(data);
-    var j = 1;
-    data.forEach((i) => {
-      // Insérer une ligne dans le tableau
-      var row = table.insertRow(0);
-      // Insérer des cellules dans le tableau
-      var cell1 = row.insertCell(0);
-      var cell2 = row.insertCell(1);
-      var cell3 = row.insertCell(2);
-      var cell4 = row.insertCell(3);
-      var cell5 = row.insertCell(4);
-      var cell6 = row.insertCell(5);
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
 
-      cell1.innerHTML = j;
-      cell2.innerHTML = i.type;
-      cell3.innerHTML = i.createdAt.substring(0,10);
-      cell4.innerHTML = i.etatActuelle;
-      cell5.innerHTML =       `<a href="demandeConsult.html?id=`+i._id+`">  <i class="fas fa-eye"></i></a>`;
-      cell6.innerHTML = '<a href="deleteObject.html?id='+i._id+ '&object=demandes&redirect=demande"> <i class="fas fa-trash-alt"></i></a>' ;
+  <!-- jQuery -->
+  <script src="../plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="../plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="../plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
 
-      j = j + 1;
-    });
-  };
-  // Send request
-  request.send();
-</script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="../plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../dist/js/adminlte.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../dist/js/demo.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="../dist/js/pages/dashboard.js"></script>
 
-<!--Search-->
-<script>
- 
-  function filter(){
-   var typeFilter = document.getElementById("type");
-   var etatFilter = document.getElementById("etat");
 
- var tbody = document.getElementById("listDemande");
- //var tbody = table.querySelector("tbody");
- var rows = tbody.getElementsByTagName("tr");
- 
- var type = typeFilter.value.toLowerCase().replace(/\s/g, '');
- var etat = etatFilter.value.toLowerCase().replace(/\s/g, '');
 
- 
- 
- for (var i = 0; i < rows.length; i++) { // Start from 1 to skip the header row
-    var row = rows[i];
-    var typeCell = row.cells[1].textContent.toLowerCase().replace(/\s/g, ''); // Assuming the type is in the second cell
-    var etatCell = row.cells[3].textContent.toLowerCase().replace(/\s/g, ''); // Assuming the etat is in the fourth cell
+  <script>
+    // Définir une requête de connection standard JS
+    var request = new XMLHttpRequest();
+    // Choisir la méthode GET comme une méthode d'accès au serveur et récupérer les données .
+    request.open("GET", "http://127.0.0.1:3000/demandes", true);
+    // Load les données à partir de la serveur -> Début connection
+    request.onload = function () {
+      // Begin accessing JSON data here
+      var data = JSON.parse(this.response);
+      var table = document.getElementById("listDemande");
+      console.log(data);
+      var j = 1;
+      data.forEach((i) => {
+        // Insérer une ligne dans le tableau
+        var row = table.insertRow(0);
+        // Insérer des cellules dans le tableau
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
 
-    //console.log(typeCell);
-    // Check if the row matches the selected filters
-    var typeMatch = (type == "all" || typeCell == type);
-    var etatMatch = (etat == "all" || etatCell == etat);
+        cell1.innerHTML = j;
+        cell2.innerHTML = i.type;
+        cell3.innerHTML = i.createdAt.substring(0, 10);
+        cell4.innerHTML = i.etatActuelle;
+        cell5.innerHTML = `<a href="demandeConsult.html?id=` + i._id + `">  <i class="fas fa-eye"></i></a>`;
+        cell6.innerHTML = '<a href="deleteObject.html?id=' + i._id + '&object=demandes&redirect=demande"> <i class="fas fa-trash-alt"></i></a>';
 
-    // Show or hide the row based on the filter
-    if (typeMatch && etatMatch) {
-      row.style.display = "";
-    } else {
-      row.style.display = "none";
+        j = j + 1;
+      });
+    };
+    // Send request
+    request.send();
+  </script>
+
+  <!--Search-->
+  <script>
+
+    function filter() {
+      var typeFilter = document.getElementById("type");
+      var etatFilter = document.getElementById("etat");
+
+      var tbody = document.getElementById("listDemande");
+      //var tbody = table.querySelector("tbody");
+      var rows = tbody.getElementsByTagName("tr");
+
+      var type = typeFilter.value.toLowerCase().replace(/\s/g, '');
+      var etat = etatFilter.value.toLowerCase().replace(/\s/g, '');
+
+
+
+      for (var i = 0; i < rows.length; i++) { // Start from 1 to skip the header row
+        var row = rows[i];
+        var typeCell = row.cells[1].textContent.toLowerCase().replace(/\s/g, ''); // Assuming the type is in the second cell
+        var etatCell = row.cells[3].textContent.toLowerCase().replace(/\s/g, ''); // Assuming the etat is in the fourth cell
+
+        //console.log(typeCell);
+        // Check if the row matches the selected filters
+        var typeMatch = (type == "all" || typeCell == type);
+        var etatMatch = (etat == "all" || etatCell == etat);
+
+        // Show or hide the row based on the filter
+        if (typeMatch && etatMatch) {
+          row.style.display = "";
+        } else {
+          row.style.display = "none";
+        }
+      }
     }
-  }
-  }
- 
- </script>
+
+  </script>
 
 
 
-<!--Search old scrpit
+  <!--Search old scrpit
 <script>
   function filter(){
     var type = document.getElementById("type").value;
@@ -575,20 +579,21 @@ request.send();
 
 
 
-<script>
-  document.getElementById("userName").innerHTML= localStorage.getItem("usernameA");
-</script>
+  <script>
+    document.getElementById("userName").innerHTML = localStorage.getItem("usernameA");
+  </script>
 
-<!--LOgout-->
-<script>
-  function logout() {
-    var d = window.confirm("want to LogOut");
-    if (d == true) {
-      // localStorage.removeItem("idA");
-      localStorage.clear();
-      location.href = "signIn.html";
+  <!--LOgout-->
+  <script>
+    function logout() {
+      var d = window.confirm("want to LogOut");
+      if (d == true) {
+        // localStorage.removeItem("idA");
+        localStorage.clear();
+        location.href = "signIn.html";
+      }
     }
-  }
-</script>
+  </script>
 </body>
+
 </html>
